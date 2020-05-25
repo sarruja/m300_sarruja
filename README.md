@@ -1,3 +1,4 @@
 # m300_sarruja
 SarrujaSabesan_ST17b
-# Visual Studio Code - Test
+# Dokumentation - M300 LB2
+##von Sarruja Sabesan
