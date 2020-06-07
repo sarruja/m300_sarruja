@@ -5,12 +5,11 @@ SarrujaSabesan_ST17b
 
 # Inhaltsverzeichnis
 
-- [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](k1-umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfhig)
-  - [VirtualBox](#virtualbox)
-  - [Vagrant](#vagrant)
-  - [Visualstudio-Code](#visualstudio-code)
-  - [Git-Client](#git-client)
-  - [SSH-Key für Client erstellt](#ssh-key-fr-client-erstellt)
+- [m300_sarruja](#m300_sarruja)
+- [Dokumentation - M300 LB2](#dokumentation---m300-lb2)
+  - [von Sarruja Sabesan](#von-sarruja-sabesan)
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
+- [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
   
  
 - [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
@@ -58,21 +57,30 @@ SarrujaSabesan_ST17b
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
 Dafüt muss man sich folgendes auf dem Notebook installieren:
-- Virtualbox
+- **Virtualbox**
   VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
-- Vagrant
+- **Vagrant**
   Vagrant ist eine Anwendung zum Erstellen und Veralten von VMs. Die anwendung wird über eine Shell gesteuert.
   Die Anwendung kann auf der Seite https://www.vagrantup.com/downloads.html heruntergeladen werden.
-- Visual Studio Code
+- **Visual Studio Code**
   Visual Studio Code ermöglicht uns, unser Repository an einem Ort zu verwalten.
   Sie kann auf der Seite https://code.visualstudio.com heruntergeladen werden.
   Anschliessend fügt man rei Extension hinzu: Markdown All in One, Vagrant Extension und vscode-pdf Extension
-- Git-Client
+- **GitHub Account erstellen**
+  1. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
+   _Repository erstellen_
+  1.   Nun melden wir uns auf Github an
+  2.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
+  3.   Für das Repository muss amn einen Namen geben und wenn gwünscht eine Description
+  4.   Denn Radio-Button lassen wir auf **_Public_**
+  5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
+  6.   Nun können wir auf **_Create_** klicken.
+- **Git-Client**
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
   Mit dem ist es möglich, Cloud-Repositories zu klonen, herunterladen und hochzuladen.
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
-  Damit wie den Git Client benutzten können, müssen wir noch einen Git-Account und Repository erstellen (siehe dafür K2).
-- SSH Key für Client erstellen
+  
+- **SSH Key für Client erstellen**
   Dies erstellt man nachdem man Git/Bash installiert hat.
 
