@@ -57,10 +57,10 @@ SarrujaSabesan_ST17b
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
 Dafüt muss man sich folgendes auf dem Notebook installieren:
-- **Virtualbox**
+- **Virtualbox** (space, space)
   VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
-- **Vagrant**
+- **Vagrant** (space)
   Vagrant ist eine Anwendung zum Erstellen und Veralten von VMs. Die anwendung wird über eine Shell gesteuert.
   Die Anwendung kann auf der Seite https://www.vagrantup.com/downloads.html heruntergeladen werden.
 - **Visual Studio Code**
@@ -72,7 +72,7 @@ Dafüt muss man sich folgendes auf dem Notebook installieren:
    _Repository erstellen_
   1.   Nun melden wir uns auf Github an
   2.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
-  3.   Für das Repository muss amn einen Namen geben und wenn gwünscht eine Description
+  3.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
   4.   Denn Radio-Button lassen wir auf **_Public_**
   5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
   6.   Nun können wir auf **_Create_** klicken.
