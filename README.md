@@ -57,7 +57,7 @@ SarrujaSabesan_ST17b
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
 Dafüt muss man sich folgendes auf dem Notebook installieren:
-- **Virtualbox** (space, space)
+- **Virtualbox** ( , )
   VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
 - **Vagrant** (space)
