@@ -92,9 +92,9 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
    _Client konfigurieren_
    
    Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
-   > $ git config --global user.name "<username>"
+   > $ git config --global user.name ```"<username>"```
 
-   > $ git config --global user.email "<e-mail>"
+   > $ git config --global user.email ```"<e-mail>"```
 
    Schon ist man mit der Konfiguration fertig.
 
