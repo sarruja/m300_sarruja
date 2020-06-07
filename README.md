@@ -10,6 +10,8 @@ SarrujaSabesan_ST17b
   - [von Sarruja Sabesan](#von-sarruja-sabesan)
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
+  - [_Repository erstellen_](#repository-erstellen)
+  - [_Client konfigurieren_](#client-konfigurieren)
   
  
 - [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
@@ -57,19 +59,26 @@ SarrujaSabesan_ST17b
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
 Dafür muss man sich folgendes auf dem Notebook installieren:
-- **Virtualbox** ( , )
-  VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
+- **Virtualbox** 
+  
+-  VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
-- **Vagrant** (space)
+- **Vagrant**
+  
   Vagrant ist eine Anwendung zum Erstellen und Veralten von VMs. Die anwendung wird über eine Shell gesteuert.
   Die Anwendung kann auf der Seite https://www.vagrantup.com/downloads.html heruntergeladen werden.
 - **Visual Studio Code**
+  
   Visual Studio Code ermöglicht uns, unser Repository an einem Ort zu verwalten.
   Sie kann auf der Seite https://code.visualstudio.com heruntergeladen werden.
   Anschliessend fügt man rei Extension hinzu: Markdown All in One, Vagrant Extension und vscode-pdf Extension
+
 - **GitHub Account erstellen**
+  
   1. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
+   
    _Repository erstellen_
+   ----
   2.   Nun melden wir uns auf Github an
   3.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
   4.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
@@ -77,26 +86,43 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
   6.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
   7.   Nun können wir auf **_Create_** klicken.
 - **Git-Client**
+  
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
   Mit dem ist es möglich, Cloud-Repositories zu klonen, herunterladen und hochzuladen.
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
+
    _Client konfigurieren_
+   ----
+
   Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
    $ git config --global user.name "<username>"
+
    $ git config --global user.email "<e-mail>"
+
    Schon ist man mit der Konfiguration fertig.
+
    **einige wichtige Git-Client Befehle:**
+
    - um Repository hochzuladen (Push)
       $ cd Pfad/von/Repository | Wechseln zum Pfad, wo sich unser Repository befindet
+
       $ git add -A . | Fügt alle Dateien zum Uploaden hinzu  
+      
       $ git commit -m "Ein Kommentar" | Upload commiten
+      
       $ git push | Den Upload pushen
    - um Stauts anzuzeigen
+      
       $ git status
    - gwünschtes Verzeichnis gehen
+     
       $ cd gewünschter/Pfad/eingeben
    - Order erstellen
+     
       $ mkdir Ordername
+      
 - **SSH Key für Client erstellen**
   Dies erstellt man nachdem man Git/Bash installiert hat.
+
+
 
