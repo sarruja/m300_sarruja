@@ -6,9 +6,9 @@ SarrujaSabesan_ST17b
 # Inhaltsverzeichnis
 
 - [Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfhig)
-  - [VrtualBox](#vrtualbox)
+  - [VirtualBox](#virtualbox)
   - [Vagrant](#vagrant)
-  - [Visualstudio-Codeq](#visualstudio-codeq)
+  - [Visualstudio-Code](#visualstudio-code)
   - [Git-Client](#git-client)
   - [SSH-Key für Client erstellt](#ssh-key-fr-client-erstellt)
 - [Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
@@ -51,3 +51,11 @@ SarrujaSabesan_ST17b
   - [Persönlcihe Lernentnwicklung](#persnlcihe-lernentnwicklung)
     - [Vergleich Vorwissen - Wissenzuwachs](#vergleich-vorwissen---wissenzuwachs)
     - [Reflexion](#reflexion)
+
+
+#Git-Client
+Pfad wechseln:
+cd Pfad/Order/Unterornder
+
+Order erstellen:
+mkdir Ordnername
