@@ -55,7 +55,7 @@ SarrujaSabesan_ST17b
     - [Reflexion](#reflexion)
 
 
-# [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig] (k1-umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfhig)
+# K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
 Dafüt muss man sich folgendes auf dem Notebook installieren:
 - Virtualbox
@@ -74,4 +74,5 @@ Dafüt muss man sich folgendes auf dem Notebook installieren:
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
   Damit wie den Git Client benutzten können, müssen wir noch einen Git-Account und Repository erstellen (siehe dafür K2).
 - SSH Key für Client erstellen
+  Dies erstellt man nachdem man Git/Bash installiert hat.
 
