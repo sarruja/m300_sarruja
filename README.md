@@ -56,9 +56,7 @@ SarrujaSabesan_ST17b
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigenen Notebook einrichten.
-Dafüt muss man sich folgendes auf dem Notebook installieren:
-This is line 1.(space, space)
-Now text will appear on the next line.
+Dafür muss man sich folgendes auf dem Notebook installieren:
 - **Virtualbox** ( , )
   VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
@@ -72,17 +70,33 @@ Now text will appear on the next line.
 - **GitHub Account erstellen**
   1. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
    _Repository erstellen_
-  1.   Nun melden wir uns auf Github an
-  2.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
-  3.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
-  4.   Denn Radio-Button lassen wir auf **_Public_**
-  5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
-  6.   Nun können wir auf **_Create_** klicken.
+  2.   Nun melden wir uns auf Github an
+  3.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
+  4.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
+  5.   Denn Radio-Button lassen wir auf **_Public_**
+  6.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
+  7.   Nun können wir auf **_Create_** klicken.
 - **Git-Client**
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
   Mit dem ist es möglich, Cloud-Repositories zu klonen, herunterladen und hochzuladen.
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
-  
+   _Client konfigurieren_
+  Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
+   $ git config --global user.name "<username>"
+   $ git config --global user.email "<e-mail>"
+   Schon ist man mit der Konfiguration fertig.
+   **einige wichtige Git-Client Befehle:**
+   - um Repository hochzuladen (Push)
+      $ cd Pfad/von/Repository | Wechseln zum Pfad, wo sich unser Repository befindet
+      $ git add -A . | Fügt alle Dateien zum Uploaden hinzu  
+      $ git commit -m "Ein Kommentar" | Upload commiten
+      $ git push | Den Upload pushen
+   - um Stauts anzuzeigen
+      $ git status
+   - gwünschtes Verzeichnis gehen
+      $ cd gewünschter/Pfad/eingeben
+   - Order erstellen
+      $ mkdir Ordername
 - **SSH Key für Client erstellen**
   Dies erstellt man nachdem man Git/Bash installiert hat.
 
