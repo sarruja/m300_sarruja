@@ -5,7 +5,7 @@ SarrujaSabesan_ST17b
 
 # Inhaltsverzeichnis
 
-- [Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfhig)
+- [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#K1 - umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfhig)
   - [VirtualBox](#virtualbox)
   - [Vagrant](#vagrant)
   - [Visualstudio-Code](#visualstudio-code)
@@ -53,10 +53,18 @@ SarrujaSabesan_ST17b
     - [Reflexion](#reflexion)
 
 
-# Git-Client
+# K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
+## Vagrant
+
+## Visual Studio Code
+
+
+## Git-Client
 Pfad wechseln:
 cd Pfad/Order/Unterornder
 
 Order erstellen:
 mkdir Ordnername
-ttt
+
+## SSH Key für Client erstellen
+
