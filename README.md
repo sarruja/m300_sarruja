@@ -10,8 +10,6 @@ SarrujaSabesan_ST17b
   - [von Sarruja Sabesan](#von-sarruja-sabesan)
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
-  - [_Repository erstellen_](#repository-erstellen)
-  - [_Client konfigurieren_](#client-konfigurieren)
   
  
 - [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
@@ -61,7 +59,7 @@ Bevor man mit dem Projekt starten kann, sollte man seine Umgebung auf dem eigene
 Dafür muss man sich folgendes auf dem Notebook installieren:
 - **Virtualbox** 
   
--  VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
+   VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.
   Auf dem Laufen dann alle VM, die mit Hilfe von Vagrant automatisiert erstellt werden.
 - **Vagrant**
   
@@ -75,16 +73,16 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
 
 - **GitHub Account erstellen**
   
-  1. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
+  Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
    
    _Repository erstellen_
-   ----
-  2.   Nun melden wir uns auf Github an
-  3.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
-  4.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
-  5.   Denn Radio-Button lassen wir auf **_Public_**
-  6.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
-  7.   Nun können wir auf **_Create_** klicken.
+   
+  1.   Nun melden wir uns auf Github an
+  2.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
+  3.   Für das Repository muss amn einen Namen geben (z.B. M300-Name) und wenn gwünscht eine Description
+  4.   Denn Radio-Button lassen wir auf **_Public_**
+  5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
+  6.   Nun können wir auf **_Create_** klicken.
 - **Git-Client**
   
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
@@ -92,25 +90,24 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
 
    _Client konfigurieren_
-   ----
+   
+   Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
+   > $ git config --global user.name "<username>"
 
-  Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
-   $ git config --global user.name "<username>"
-
-   $ git config --global user.email "<e-mail>"
+   > $ git config --global user.email "<e-mail>"
 
    Schon ist man mit der Konfiguration fertig.
 
    **einige wichtige Git-Client Befehle:**
 
    - um Repository hochzuladen (Push)
-      $ cd Pfad/von/Repository | Wechseln zum Pfad, wo sich unser Repository befindet
+    > $ cd Pfad/von/Repository       _| Wechseln zum Pfad, wo sich unser Repository befindet_
 
-      $ git add -A . | Fügt alle Dateien zum Uploaden hinzu  
+    > $ git add -A .       _| Fügt alle Dateien zum Uploaden hinzu_ 
       
-      $ git commit -m "Ein Kommentar" | Upload commiten
+    > $ git commit -m "Ein Kommentar"       _| Upload commiten_
       
-      $ git push | Den Upload pushen
+    > $ git push       _| Zum Schluss den Upload pushen_
    - um Stauts anzuzeigen
       
       $ git status
