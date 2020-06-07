@@ -12,12 +12,8 @@ SarrujaSabesan_ST17b
   - [Git-Client](#git-client)
   - [SSH Key für Client erstellen](#ssh-key-füer-client-erstellen)
 - [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
-  - [GitHub oder Gitlab-Account ist erstellt](#github-oder-gitlab-account-ist-erstellt)
-  - [Git-Client wurde verwendet](#git-client-wurde-verwendetq)
-  - [Dokumentation ist als Mark Down vorhanden](#dokumentation-ist-als-mark-down-vorhanden)
-  - [Mark down-Editor ausgewählt und eingerichtet](#mark-down-editor-ausgewhlt-und-eingerichtet)
-  - [Mark down ist strukturiert](#mark-down-ist-strukturiert)
-  - [Persönlicher wissenstand](#persnlicher-wissenstand)
+  - [Mark down](#mark-down)
+  - [Persönlicher Wissenstand](#persnlicher-wissenstand)
     - [Linux](#linux)
     - [Virtualisierung](#virtualisierung)
     - [Vagrant](#vagrant)
@@ -68,7 +64,7 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
   
   Visual Studio Code ermöglicht uns, unser Repository an einem Ort zu verwalten.
   Sie kann auf der Seite https://code.visualstudio.com heruntergeladen werden.
-  Anschliessend fügt man rei Extension hinzu: Markdown All in One, Vagrant Extension und vscode-pdf Extension
+  Anschliessend fügt man rei Extension hinzu: Markdown All in One, Vagrant Extension und vscode-pdf Extension (Dafür können Sie _CTRL + SHIFT + X_ klicken und nach der Extension suchen und dann auf _Install_ klicken)
 
 - **GitHub Account erstellen**
   
@@ -116,6 +112,7 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
    - Order erstellen
      
       $ mkdir Ordername
+Weitere Befehle findet man im Internet, wie zum Beispiel das Cheetsheet [hier](https://rogerdudler.github.io/git-guide/).
       
 - **SSH Key für Client erstellen**
   Dies erstellt man nachdem man Git/Bash installiert hat, denn die Nachfolgenden Befehle müssen im _Git Bash_ ausgeführt werden.
@@ -143,3 +140,62 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
 6. Nun mit _CTRL + V_ das Kopierte einfügen und auf **Add SSH key** klicken
 7. Der Schlüssel sollte nun auf der Liste angezeigt werden
    
+# K2 - Eigene Lernumgebung (PLE) ist eingerichtet
+Markdown
+----
+Die ganze Dokumentation ist als Markdown vorhanden.
+
+Ich habe mich für Visula Studio Code entschieden. Den Link zum die Anwendung herunterzuladen, und die Extension welche wir hinzufügen müssen,
+haben ich oben bereits erwähnt.
+
+Gewisse Dateien, wie die von den virtuellen Maschienen sollten nicht ins Repository hochgelande werden, da sie zu gross sind. Dafür muss man unter 
+_File --> Preferences --> Setting_. Dort scrollt man wenig runter, bis man den Bereich _Files: Exclude_findet. Da kann man dann folgendes einzeln hinzufügen (Add Pattern auswählens), damit sie exkludiert werden.
+   "**/.git": true,
+   "**/.svn": true,
+   "**/.hg": true,
+   "**/.vagrant": true,
+   "**/.DS_Store": true
+
+Repository hinzufügn unsh pushen
+---
+Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein Repository hinzufügen und lernen wie man diesen pushen kann.
+
+1. Nach dem ich die oben genannten Einstellungen vorgenommen habe, konnte ich links auf das mittlere Symbol klicken und _Repository klonen wäheln_.
+2. Dort konnte ich dann meinen **README.md** File öffnen.
+3. In dem README.md File konnte ich meine Doku schreiben (sprich, dass was Sie gerade am lesen sind :D)
+4. Nach dem ich was geändert habe, konnte ich mit _CTRL + S_ die Änderungen speichern
+5. Nun musste ich meine Chenges 'stagen'. Dafür konnte ich wieder links auf das mittlere Symbol (wo ein 1 zu sehen ist) und dort, oben auf die drei ``...`` klicken und _Stage All Changes_ wählen oder rechtsklick auf README.md und das gleiche auswählen.
+6. Im Feld _Message_ muss man eine Nachricht hinterlegen
+7. Nun kann man Commiten, in dem man oben jauf den Hacken klickt.
+8. Zu guter Letzt muss man wieder auf die drei Punkte ``...`` und **Push** wählen.
+9. Warten bis fertig gepusht wurde, auf github dein Repository aktualieseiren und die Änderungen sollten im README sichbar sein.
+
+Fall man Hilfe für die Formatierung braucht, wie zum Beipsiel für Titel, Aufzählungen usw. findet man die unter diesen [Markdwon Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists) oder im Internet.
+
+Persönlicher Wissensstand
+----
+
+#### Linux
+
+
+#### Virtualisierung
+
+
+#### Vagrant
+
+
+#### Versionsverwaltung
+
+
+#### Git
+
+
+#### Mark down
+
+
+#### Systemsycherheit
+
+
+
+# K3 - Vagrant
+
