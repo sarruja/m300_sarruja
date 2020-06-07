@@ -68,14 +68,14 @@ Dafüt muss man sich folgendes auf dem Notebook installieren:
   Sie kann auf der Seite https://code.visualstudio.com heruntergeladen werden.
   Anschliessend fügt man rei Extension hinzu: Markdown All in One, Vagrant Extension und vscode-pdf Extension
 - **GitHub Account erstellen**
-  0. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
+  1. Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
    _Repository erstellen_
-  0.   Nun melden wir uns auf Github an
-  0.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
-  0.   Für das Repository muss amn einen Namen geben und wenn gwünscht eine Description
-  0.   Denn Radio-Button lassen wir auf **_Public_**
-  0.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
-  0.   Nun können wir auf **_Create_** klicken.
+  1.   Nun melden wir uns auf Github an
+  2.   Auf der Wilkommens-Seite klicken wir auf **_Start a procjet_**
+  3.   Für das Repository muss amn einen Namen geben und wenn gwünscht eine Description
+  4.   Denn Radio-Button lassen wir auf **_Public_**
+  5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
+  6.   Nun können wir auf **_Create_** klicken.
 - **Git-Client**
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
   Mit dem ist es möglich, Cloud-Repositories zu klonen, herunterladen und hochzuladen.
