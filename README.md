@@ -246,15 +246,24 @@ Sie erstellt Statistiken über Anfragen, Besuche, Verweise, Länder der Besucher
 Die Installation ist fast ähnlich wie beim Apache2.
 1. Zuerst aktualisiert man  die Paketquellen. Wenn der Befehl erst gerade durchgeführt wurde, muss man ihn nicht nochmals ausführen.
    
-   $sudp apt-get update
+   `$ sudo apt-get update`
 
 2. Nun wird Webalizer installiert
    
-   $ sudo apt-get install -y webalizer
+   `$ sudo apt-get install -y webalizer`
 
 
 Vagrant Befehle
 ----
+Vagrantfile anlegen: `vagrant init`  
+Vagrant VM starten: `Vagrant up`  
+Vagrant SSH-Verbindugn aufbauen: `vagrant ssh`  
+Status von der Vagrant VM anzeigen lassen: `vagrant status`  
+Weitergeleitete Ports anzeigen: `vagrant port`  
+VM stoppen/ herunterfahren: `vagrant halt`  
+VM neustarten: `vagrant reload`  
+VM komplett löschen: `vagrant destroy`  
+
 
 
 Umgebungsvariabeln
