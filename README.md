@@ -255,28 +255,15 @@ Die Installation ist fast ähnlich wie beim Apache2.
 
 Vagrant Befehle
 ----
-Vagrantfile anlegen: `vagrant init`  
-Vagrant VM starten: `Vagrant up`  
-Vagrant SSH-Verbindugn aufbauen: `vagrant ssh`  
-Status von der Vagrant VM anzeigen lassen: `vagrant status`  
-Weitergeleitete Ports anzeigen: `vagrant port`  
-VM stoppen/ herunterfahren: `vagrant halt`  
-VM neustarten: `vagrant reload`  
-VM komplett löschen: `vagrant destroy`  
-
-|a|b|c|
-|Vagrantfile anlegen:| `vagrant init`  |
-|Vagrant VM starten: |`Vagrant up`|
-|Vagrant SSH-Verbindugn aufbauen: |`vagrant ssh`
-
-
-
-
-Status von der Vagrant VM anzeigen lassen: `vagrant status`  
-Weitergeleitete Ports anzeigen: `vagrant port`  
-VM stoppen/ herunterfahren: `vagrant halt`  
-VM neustarten: `vagrant reload`  
-VM komplett löschen: `vagrant destroy` 
+- Vagrantfile anlegen: `vagrant init`
+- Vagrant VM starten: `Vagrant up`
+- Vagrant SSH-Verbindugn aufbauen: `vagrant ssh`
+- Status von der Vagrant VM anzeigen lassen: `vagrant status`
+- Weitergeleitete Ports anzeigen: `vagrant port`
+- VM stoppen/ herunterfahren: `vagrant halt`
+- VM neustarten: `vagrant reload`
+- VM komplett löschen: `vagrant destroy`  
+ 
 
 Umgebungsvariabeln
 ----
