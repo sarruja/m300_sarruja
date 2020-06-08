@@ -47,9 +47,10 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
 - Git-Client
 - SSH-Key für client erstellen
 
-## Github
-GitHub Account erstellen
-----
+Github
+---
+## GitHub Account erstellen
+
   Wir erstellen uns auf [www.github.com](https://github.com) einen Benutzerkonte. Nach dem erstellen, muss man zuerst noch seine E-Mail bestätigen.
    
    _Repository erstellen_
@@ -60,8 +61,8 @@ GitHub Account erstellen
   4.   Denn Radio-Button lassen wir auf **_Public_**
   5.   Bei **_Initialize this repository with a README_** müssen wir ein Hacken setzten.
   6.   Nun können wir auf **_Create_** klicken.
-Git-Client
-----  
+   
+## Git-Client  
   Damit wie lokalen auf unserem Notebook arbeiten könen, müssen wir den Git Client (Git Bash auf Windows) installieren.
   Mit dem ist es möglich, Cloud-Repositories zu klonen, herunterladen und hochzuladen.
   Diese kann man auf der Seite https://git-scm.com/downloads herunterladen.
@@ -69,34 +70,31 @@ Git-Client
    _Client konfigurieren_
    
    Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
-   > $ git config --global user.name ``"<username>"``
+  $ git config --global user.name ``"<username>"``
 
-   > $ git config --global user.email ``"<e-mail>"``
+  $ git config --global user.email ``"<e-mail>"``
 
    Schon ist man mit der Konfiguration fertig.
 
    **einige wichtige Git-Client Befehle:**
 
    - um Repository hochzuladen (Push)
-    ``$ cd Pfad/von/Repository``       _| Wechseln zum Pfad, wo sich unser Repository befindet_
-
-    ``$ git add <Dateipfad>``       _| Fügt Dateien zum Uploaden hinzu; für alle Dateien, eifach `<Dateipfad>` durch ``-A_``_
-      
-    ``$ git commit -m "Ein Kommentar"``       _| Upload commiten_
-      
-    ``$ git push``       _| Zum Schluss den Upload pushen_
+  1. Wechseln zum Pfad, wo sich unser Repository befindet
+    $ cd Pfad/von/Repository
+  2. Fügt Dateien zum Uploaden hinzu; für alle Dateien, eifach `<Dateipfad>` durch ``-A_``
+    $ git add <Dateipfad>
+  3. Upload commiten    
+    $ git commit -m "Ein Kommentar" 
+  4. Zum Schluss den Upload pushen
+    $ git push
    - um Stauts anzuzeigen
-      
-    ``$ git status``
+    $ git status
    - gwünschtes Verzeichnis gehen
-     
-    ``$ cd gewünschter/Pfad/eingeben``
-   - Order erstellen
-     
-    ``$ mkdir Ordername``
+     $ cd gewünschter/Pfad/eingeben
+   - Order erstellen     
+    $ mkdir Ordername
    - Lokales Repository aktualisieren
-
-    ``$ git pull``
+    $ git pull
 Weitere Befehle findet man im Internet, wie zum Beispiel das Cheetsheet [hier](https://rogerdudler.github.io/git-guide/).
       
 SSH Key für Client erstellen
@@ -105,14 +103,14 @@ SSH Key für Client erstellen
 
 1. Git Bash öffnen
 2. Folgenden Befehl ausführen
-   > $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+   $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 3. Neuer SSH-Key wird erstellen. Es erscheint:
-   > Generationg public/private rsa key pair
+   $ Generationg public/private rsa key pair
 4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-   > Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
+   $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
 5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
-   > Enter passphrase (empty for no passphrase): [Passwort]
-   > Enter same passphrase again: [Passwort wiederholen]
+   $ Enter passphrase (empty for no passphrase): [Passwort]
+   $ Enter same passphrase again: [Passwort wiederholen]
    
 - **SSH-Key dem Agent hinzufügen**
 1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
@@ -138,9 +136,13 @@ Anschliessend fügt man drei Extension hinzu: Markdown All in One, Vagrant Exten
 Gewisse Dateien, wie die von den virtuellen Maschienen sollten nicht ins Repository hochgelande werden, da sie zu gross sind. Dafür muss man unter 
 _File --> Preferences --> Setting_. Dort scrollt man wenig runter, bis man den Bereich _Files: Exclude_findet. Da kann man dann folgendes einzeln hinzufügen (Add Pattern auswählens), damit sie exkludiert werden.
    "**/.git": true,
+
    "**/.svn": true,
+
    "**/.hg": true,
+
    "**/.vagrant": true,
+
    "**/.DS_Store": true
 
 Repository hinzufügn unsh pushen
@@ -160,32 +162,32 @@ Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein R
 
 Persönlicher Wissensstand
 ----
-#### Linux
+### Linux
 Linuy ist der Kernel des Betriebssystem und ist für die Kommunikation zwischen HW und SW zuständig.
 Linux wrid umfassend eingesetzt, unteranderem au Servern und Mobiltelefonen. 
 
-#### Virtualisierung
+### Virtualisierung
 Für die Virtualisierung benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die VMs laufen, die mithilfe vom Vagrantfile erstellt werden.
 Das tolle ist, das Virtualbox mit Vagrant kompatibel ist.
 
-#### Vagrant
+### Vagrant
 Vagrant ist eine Anwendung zur Erstellen und Verwalten von VMs. Die anwendung wird über eine Shell gesteuert.
 Die Anwendung kann auf der Seite https://www.vagrantup.com/downloads.html heruntergeladen werden.
 Vagrant hilft uns dabei, einfach und automatisiert eine Virtuelle Maschiene zu erstellen.
 So bald man sich damit ein wenig beschäftigt hat, kann man viele VMs, eifach und schnell installieren. 
 
-#### Versionsverwaltung / Git
+### Versionsverwaltung / Git
 
 
 
-#### Mark down
+### Mark down
 Markdown übersetzt einfach einen Text in HTML.
 Man kann auch Offline die Texte schreiben und publizieren, sobald man wieder Zugriff aufs Internet hat.
 Ich persönlich hatte noch nie in dieser Form eine Dokumentation geschrieben. Bisher nur auf Word oder GoogleDocs. Daher war das was ganz neues für mich.
 
 Zu Beginn muss man sich schlau mahcne, wie man einen Titel darstelle, oder etwas verlinken kann. Doch mit dem [Markdwon Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists) habe ich mich schnell zurecht gefunden.
 
-#### Systemsycherheit
+### Systemsycherheit
 Zu Systemsicherheit habe ich bereits ein Modul hinter mir. Ich weiss zwar wie man eine Firewall einrichtet, doch bei einem Reverse-Proxy bin ich ehrlich gesagt einbisschen überfordert.
 
 
