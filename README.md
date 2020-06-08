@@ -82,7 +82,7 @@ GitHub
   **_um Repository hochzuladen (Push)_**
   1. Wechseln zum Pfad, wo sich unser Repository befindet
    
-    `$ cd Pfad/von/Repository`
+    $ cd Pfad/von/Repository
   2. Fügt Dateien zum Uploaden hinzu; für alle Dateien, eifach `<Dateipfad>` durch ``-A_``
    
     `$ git add <Dateipfad>`
