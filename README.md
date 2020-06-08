@@ -221,11 +221,19 @@ Ich habe mich zunächst entschieden, einen Apache2 Webserver und Webalizer zu In
 
 VM aus Vagrant-Cloud einrichten
 ----
-Zu nächst habe ich mit `mkdir MeineVagrantVM` einen neuen Order gemacht.
+In der [Vagrant-Cloud](https://app.vagrantup.com/boxes/search), gibt es einige VM die bereit sind installiert zu werden.
+Ich habe mich für das ubuntu/xenial entschieden.
+
+Zuerst habe ich in meinem Repository mit `mkdir MeineVagrantVM` einen neuen Order gemacht.
+
+Anschliessend habe ich in das Verzeichnis gewechselt: `cd MeineVagrantVM`
 
 Dort habe ich mit Hilfe von dem Befehl `Vagrant init ubuntu/xenial64` ein Vagrant File angelegt.
 
+Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.
+
 Sobald das gemacht ist kann man die VM mit `vagrant up` starten.
+Wenn Sie nun VirtualBox öffnen, so sehen Sie auch die erstellte und gestartete VM.
 
 Mit `vagrant SSH`kann man eine SSH-Verbindung zur VM aufbauen.
 
@@ -287,6 +295,8 @@ Sicherheitsaspekte
 
 Firewall inkl. Rules einrichten
 ----
+Wir bauen wieder eine SSH verbindung auf mit der erstellten VM `vagrant ssh`
+
 Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
 
    `$ netstat -tulpen`
@@ -294,16 +304,48 @@ Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
 1. Um die Firewall einzurichten, muss man sie zuerst installieren.
    `$ sudo apt-get install`
 
-2. Bevor ich sie nun starte, richte ich die Regeln ein
-   
-3. 
+2. Bevor ich sie nun starte, richte ich die Regeln ein.
 
+   Port 80 (HTTP) für alle öffnen:
 
+   `sudo ufw allow 80/tcp`
 
+   Port 22 (SSH) für die Host, auf dem die VM lauft, öffnen:
+
+   `w` diese gibt eine IP aus, diese bruachen die dann für den nächsten Befehl under [Host-IP]  
+   `sudo ufw allow from [Host-IP] to any port 22`
+
+   Port 3306 (MySQL) nur für den Webserver öffnen
+   `sudo ufw allow from [IP Web-VM] to any port 3306`
+
+   Ausgehende Verbindungen sind standartmässig erlauben. Werden die Verbindungen nach Aussen nicht benötigt oder nur wenig bestimmte, so kann man alle schliessen und die einzelnen öffnen.
+
+   `sudo ufw deny ou to any`  
+   `sudo ufw allow out 22/tcp`
+3. mit `exit` können Sie die Verbindung verlassen und dann wieder versuchen eine Verbindung aufzubauen.
+4. Falls Sie eine Regel löschen wollen:
+   `sudo ufw status numbred`
+   `sudo ufw delete [number]`  
 
 Reverse-Proxy einrichten
 ----
+Der Webserver kann man auch als einen Reverse Proxy eingerichtete werden.
 
+1. Zuerst muss man folgendes installieren:  
+   `sudo apt-get isntall libapache2-mod-proxy-html`<-- Dies ist schon im apache2-bin entahalten  
+   `sudo apt-get install libxml2-dev`
+
+2. Die Modulue müssen nun aktiviert werden:  
+   `sudo a2enmod proxy`  --> danach ist ein `sudo service apache2 restart` mahcen. Kann aber auch nach der aktivierung der drei Module gemacht werden.  
+   `sudo a2enmod proxy_html`  
+   `sudo a2enmod proxy_http`  
+
+3. Gehen sie nun in das Verzeichnis `cd etc/apache2` und öffnen sie das folgende Dokument mit dem folgenden Befehl `sudo nano apache2.conf`  
+   Ergänzen sie das File wie gefolgt  
+   `ServerName localhost`
+
+4. Apache-Webserver muss nun neugestartet werden:  
+   `sudo service apache2 restart`
 
 Benutzer- und Rechtevergabe eingerichten
 ----
