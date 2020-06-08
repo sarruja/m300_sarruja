@@ -47,7 +47,7 @@ Dafür muss man sich folgendes auf dem Notebook installieren:
 - Git-Client
 - SSH-Key für client erstellen
 
-Github
+GitHub
 ---
 ## GitHub Account erstellen
 
@@ -70,9 +70,9 @@ Github
    _Client konfigurieren_
    
    Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
-  $ git config --global user.name ``"<username>"``
+  $ git config --global user.name "<username>"
 
-  $ git config --global user.email ``"<e-mail>"``
+  $ git config --global user.email "<e-mail>"
 
    Schon ist man mit der Konfiguration fertig.
 
@@ -103,12 +103,14 @@ SSH Key für Client erstellen
 
 1. Git Bash öffnen
 2. Folgenden Befehl ausführen
+ 
    $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
-3. Neuer SSH-Key wird erstellen. Es erscheint:
+4. Neuer SSH-Key wird erstellen. Es erscheint:
+  
    $ Generationg public/private rsa key pair
-4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
+5. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
    $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
-5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
+6. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
    $ Enter passphrase (empty for no passphrase): [Passwort]
    $ Enter same passphrase again: [Passwort wiederholen]
    
