@@ -341,7 +341,7 @@ Der Webserver kann man auch als einen Reverse Proxy eingerichtete werden.
    `sudo a2enmod proxy_http`  
 
 3. Gehen sie nun in das Verzeichnis `cd etc/apache2` und öffnen sie das folgende Dokument mit dem folgenden Befehl  
-4. `sudo nano apache2.conf`  
+   `sudo nano apache2.conf`  
    Ergänzen sie das File wie gefolgt  
    `ServerName localhost`
 
