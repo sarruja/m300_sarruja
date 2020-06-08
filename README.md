@@ -24,8 +24,10 @@ SarrujaSabesan_ST17b
     - [Mark down](#mark-down)
     - [Systemsycherheit](#systemsycherheit)
 - [K3 - Vagrant](#k3---vagrant)
-  - [Vagrant Befehle](#vagrant-befehle)
   - [VM aus Vagrant-Cloud einrichten](#vm-aus-vagrant-cloud-einrichten)
+    - [Installation Apache2](#installation-apache2)
+    - [Installation Webalizer](#installation-webalizer)
+  - [Vagrant Befehle](#vagrant-befehle)
   - [Umgebungsvariabeln](#umgebungsvariabeln)
   - [Netwerkplan](#netwerkplan)
   - [Sicherheitsaspekte](#sicherheitsaspekte)
@@ -209,13 +211,36 @@ Zu Systemsicherheit habe ich bereits ein Modul hinter mir. Ich weiss zwar wie ma
 
 
 # K3 - Vagrant
-Ich habe mich zunächst entschieden, einen Apache2 Webserver zu Installieren.
-
-Vagrant Befehle
-----
+Ich habe mich zunächst entschieden, einen Apache2 Webserver und Webalizer zu Installieren.
 
 
 VM aus Vagrant-Cloud einrichten
+----
+Zu nächst habe ich mit `mkdir MeineVagrantVM` einen neuen Order gemacht.
+
+Dort habe ich mit Hilfe von dem Befehl `Vagrant init ubuntu/xenial64` ein Vagrant File angelegt.
+
+Sobald das gemacht ist kann man die VM mit `vagrant up` starten.
+
+Mit `vagrant SSH`kann man eine SSH-Verbindung zur VM aufbauen.
+
+### Installation Apache2
+Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
+
+1. Ubuntu Paketquellen aktulisieren
+   
+   $ sudo apt-get update
+
+2. Nun wird Apache installiert
+   
+   $ sudo apt-get install -y apache2
+   
+### Installation Webalizer
+
+
+
+
+Vagrant Befehle
 ----
 
 
