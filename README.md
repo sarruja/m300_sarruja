@@ -4,38 +4,31 @@ SarrujaSabesan_ST17b
 ## von Sarruja Sabesan
 
 # Inhaltsverzeichnis
+- [m300_sarruja](#m300_sarruja)
+- [Dokumentation - M300 LB2](#dokumentation---m300-lb2)
+  - [von Sarruja Sabesan](#von-sarruja-sabesan)
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
-  - [Github](#github)
-  - [SSH Key für Client erstellen](#ssh-key-füer-client-erstellen)
-- [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#eigene-lernumgebung-ple-ist-eingerichtet)
-  - [Mark down](#mark-down)
-  - [Persönlicher Wissenstand](#persnlicher-wissenstand)
-- [K3 - Vagrant](#vagrant)
-  - [Bestehende vm aus Vagrant-Cloud einrichten](#bestehende-vm-aus-vagrant-cloud-einrichten)
-  - [Kennt die Vagrant-Befehle](#kennt-die-vagrant-befehle)
-  - [Eingerichtete Umgebund ist dokumentiert](#eingerichtete-umgebund-ist-dokumentiert)
-    - [Umgebungsvariable](#umgebungsvariable)
-    - [Netzwerkplan gezeichnet](#netzwerkplan-gezeichnet)
-    - [Sicherheitsapekte](#sicherheitsapekte)
-  - [Funktionsweise getestet inkl. Dokumentation der Testfälle](#funktionsweise-getestet-inkl-dokumentation-der-testflle)
-    - [Testfälle](#testflle)
-  - [andere, vorgefertigte vm auf eigenem Notebook aufgesetzt](#andere-vorgefertigte-vm-auf-eigenem-notebook-aufgesetzt)
-  - [Projekt mit Git und Mark Down dokumentiert](#projekt-mit-git-und-mark-down-dokumentiert)
-- [K4 - Sicherheitsaspekte sind implementiert](#sicherheitsaspekte-sind-implementiert)
-  - [Firewall eingerichtet inkl. Rules](#firewall-eingerichtet-inkl-rules)
-  - [Reverse-Proxy eingerichtet](#reverse-proxy-eingerichtet)
-  - [Benutzer- und Rechtevergabe ist eingerichtet](#benutzer--und-rechtevergabe-ist-eingerichtet)
-  - [Zugang mit SSH-Tunnel abgesichert](#zugang-mit-ssh-tunnel-abgesichert)
-  - [Sicherheitsmassnahmen sind dokumentiert](#sicherheitsmassnahmen-sind-dokumentiert)
-  - [Projekt mit Git und Mark Down dokumentiert](#projekt-mit-git-und-mark-down-dokumentiert)
-- [K5 - Zusätzliche Bewertungspunkte](#zustzliche-bewertungspunkte)
-  - [Umsetzung eigener Ideen](#umsetzung-eigener-ideen)
-    - [Cloud-Integration (Einsatz einer IaaS-Umgebung)](#cloud-integration-einsatz-einer-iaas-umgebung)
-    - [Authentifizierung und Autorisierung via LDAP](#authentifizierung-und-autorisierung-via-ldap)
-    - [Übungsdokumentation als Vorlage für Modul-Unterlagen erstellt](#bungsdokumentation-als-vorlage-fr-modul-unterlagen-erstellt)
-  - [Persönlcihe Lernentnwicklung](#persnlcihe-lernentnwicklung)
-    - [Vergleich Vorwissen - Wissenzuwachs](#vergleich-vorwissen---wissenzuwachs)
-    - [Reflexion](#reflexion)
+  - [GitHub](#github)
+  - [GitHub Account erstellen](#github-account-erstellen)
+  - [Git-Client](#git-client)
+  - [SSH Key für Client erstellen](#ssh-key-für-client-erstellen)
+- [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#k2---eigene-lernumgebung-ple-ist-eingerichtet)
+  - [Markdown](#markdown)
+  - [Repository hinzufügn unsh pushen](#repository-hinzufügn-unsh-pushen)
+  - [Persönlicher Wissensstand](#persönlicher-wissensstand)
+    - [Linux](#linux)
+    - [Virtualisierung](#virtualisierung)
+    - [Vagrant](#vagrant)
+    - [Versionsverwaltung / Git](#versionsverwaltung--git)
+    - [Mark down](#mark-down)
+    - [Systemsycherheit](#systemsycherheit)
+- [K3 - Vagrant](#k3---vagrant)
+  - [Vagrant Befehle](#vagrant-befehle)
+  - [VM aus Vagrant-Cloud einrichten](#vm-aus-vagrant-cloud-einrichten)
+  - [Umgebungsvariabeln](#umgebungsvariabeln)
+  - [Netwerkplan](#netwerkplan)
+  - [Sicherheitsaspekte](#sicherheitsaspekte)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -122,7 +115,7 @@ SSH Key für Client erstellen
 3. Neuer SSH-Key wird erstellen. Es erscheint:
   
   `$ Generationg public/private rsa key pair`
-  
+
 4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
   
   `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
@@ -217,3 +210,24 @@ Zu Systemsicherheit habe ich bereits ein Modul hinter mir. Ich weiss zwar wie ma
 
 # K3 - Vagrant
 Ich habe mich zunächst entschieden, einen Apache2 Webserver zu Installieren.
+
+Vagrant Befehle
+----
+
+
+VM aus Vagrant-Cloud einrichten
+----
+
+
+Umgebungsvariabeln
+----
+
+
+
+Netwerkplan
+----
+
+Sicherheitsaspekte
+----
+
+
