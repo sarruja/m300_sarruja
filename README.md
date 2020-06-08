@@ -31,6 +31,11 @@ SarrujaSabesan_ST17b
   - [Umgebungsvariabeln](#umgebungsvariabeln)
   - [Netwerkplan](#netwerkplan)
   - [Sicherheitsaspekte](#sicherheitsaspekte)
+- [K4 - Sicherheitsaspekte sind implementieren](#k4---sicherheitsaspekte-sind-implementieren)
+  - [Firewall inkl. Rules einrichten](#firewall-inkl-rules-einrichten)
+  - [Reverse-Proxy einrichten](#reverse-proxy-einrichten)
+  - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
+  - [Zugang mit SSH-Tunnel absichern](#zugang-mit-ssh-tunnel-absichern)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -276,4 +281,34 @@ Netwerkplan
 Sicherheitsaspekte
 ----
 
+
+# K4 - Sicherheitsaspekte sind implementieren
+
+
+Firewall inkl. Rules einrichten
+----
+Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
+
+   `$ netstat -tulpen`
+
+1. Um die Firewall einzurichten, muss man sie zuerst installieren.
+   `$ sudo apt-get install`
+
+2. Bevor ich sie nun starte, richte ich die Regeln ein
+   
+3. 
+
+
+
+
+Reverse-Proxy einrichten
+----
+
+
+Benutzer- und Rechtevergabe eingerichten
+----
+
+
+Zugang mit SSH-Tunnel absichern
+----
 
