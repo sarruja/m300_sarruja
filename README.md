@@ -117,15 +117,19 @@ SSH Key für Client erstellen
 1. Git Bash öffnen
 2. Folgenden Befehl ausführen
  
-   $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+  `$  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
 3. Neuer SSH-Key wird erstellen. Es erscheint:
   
-  $ Generationg public/private rsa key pair
+  `$ Generationg public/private rsa key pair`
 4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-  $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
+  
+  `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
+
 5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
-  $ Enter passphrase (empty for no passphrase): [Passwort]
-  $ Enter same passphrase again: [Passwort wiederholen]
+   
+  `$ Enter passphrase (empty for no passphrase): [Passwort]`
+
+  `$ Enter same passphrase again: [Passwort wiederholen]`
    
 - **SSH-Key dem Agent hinzufügen**
 1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
