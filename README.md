@@ -109,34 +109,36 @@ SSH Key für Client erstellen
 ----
   Dies erstellt man nachdem man Git/Bash installiert hat, denn die Nachfolgenden Befehle müssen im _Git Bash_ ausgeführt werden.
 
-1. Git Bash öffnen
-2. Folgenden Befehl ausführen
- 
-  $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
-3. Neuer SSH-Key wird erstellen. Es erscheint:
-  
-  $ Generationg public/private rsa key pair
-4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-  
-  `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
-
-5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
+  1. Git Bash öffnen
+  2. Folgenden Befehl ausführen
    
-  `$ Enter passphrase (empty for no passphrase): [Passwort]`
+   `$ ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
 
-  `$ Enter same passphrase again: [Passwort wiederholen]`
-   
-- **SSH-Key dem Agent hinzufügen**
-1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
+  3. Neuer SSH-Key wird erstellen. Es erscheint:
+    
+   `$ Generationg public/private rsa key pair`
 
-      Das File findet man unter ``C:\User\Username\.ssh``
+  4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
+    
+   `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
 
-2. Nun geht man auf [www.github.com](https://github.com) und meldet sich an
-3. Auf der Linkenseite im Menüberiech, zum Abschnitt **SSH und GPG keys** wechseln
-4. **New SSH key** wählen
-5. Unter **Title** einen Titel für den Key geben
-6. Nun mit _CTRL + V_ das Kopierte einfügen und auf **Add SSH key** klicken
-7. Der Schlüssel sollte nun auf der Liste angezeigt werden
+  5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
+     
+   `$ Enter passphrase (empty for no passphrase): [Passwort]`
+
+   `$ Enter same passphrase again: [Passwort wiederholen]`
+     
+  - **SSH-Key dem Agent hinzufügen**
+  1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
+
+        Das File findet man unter ``C:\User\Username\.ssh``
+
+  2. Nun geht man auf [www.github.com](https://github.com) und meldet sich an
+  3. Auf der Linkenseite im Menüberiech, zum Abschnitt **SSH und GPG keys** wechseln
+  4. **New SSH key** wählen
+  5. Unter **Title** einen Titel für den Key geben
+  6. Nun mit _CTRL + V_ das Kopierte einfügen und auf **Add SSH key** klicken
+  7. Der Schlüssel sollte nun auf der Liste angezeigt werden
    
 # K2 - Eigene Lernumgebung (PLE) ist eingerichtet
 Markdown
