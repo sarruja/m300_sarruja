@@ -234,8 +234,25 @@ Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
 2. Nun wird Apache installiert
    
    $ sudo apt-get install -y apache2
+
+Den Erfolg kann man mit dem folgenden Befehl testen:
+
+   $ curl http://localhost
+
    
 ### Installation Webalizer
+Webalizer ist ein Programm, welche zur Auswertung der Logdateien dient.
+Sie erstellt Statistiken über Anfragen, Besuche, Verweise, Länder der Besucher auf Webseiten.
+
+Die Installation ist fast ähnlich wie beim Apache2.
+1. Zuerst aktualisiert man  die Paketquellen. Wenn der Befehl erst gerade durchgeführt wurde, muss man ihn nicht nochmals ausführen.
+   
+   $sudp apt-get update
+
+2. Nun wird Webalizer installiert
+   
+   $ sudo apt-get install -y webalizer
+
 
 
 
