@@ -230,7 +230,6 @@ Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
 1. Ubuntu Paketquellen aktulisieren
    
    $ sudo apt-get update
-
 2. Nun wird Apache installiert
    
    $ sudo apt-get install -y apache2
