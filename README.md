@@ -117,7 +117,7 @@ SSH Key für Client erstellen
 1. Git Bash öffnen
 2. Folgenden Befehl ausführen
  
-  $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+   $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 3. Neuer SSH-Key wird erstellen. Es erscheint:
   
   $ Generationg public/private rsa key pair
