@@ -112,21 +112,21 @@ SSH Key für Client erstellen
   1. Git Bash öffnen
   2. Folgenden Befehl ausführen
    
-   `$ ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
+     `$ ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
 
   3. Neuer SSH-Key wird erstellen. Es erscheint:
     
-   `$ Generationg public/private rsa key pair`
+     `$ Generationg public/private rsa key pair`
 
   4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
     
-   `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
+     `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
 
   5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
      
-   `$ Enter passphrase (empty for no passphrase): [Passwort]`
+     `$ Enter passphrase (empty for no passphrase): [Passwort]`
 
-   `$ Enter same passphrase again: [Passwort wiederholen]`
+     `$ Enter same passphrase again: [Passwort wiederholen]`
      
   - **SSH-Key dem Agent hinzufügen**
   1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
@@ -229,14 +229,14 @@ Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
 
 1. Ubuntu Paketquellen aktulisieren
    
-   $ sudo apt-get update
+   `$ sudo apt-get update`
 2. Nun wird Apache installiert
    
-   $ sudo apt-get install -y apache2
+   `$ sudo apt-get install -y apache2`
 
 Den Erfolg kann man mit dem folgenden Befehl testen:
 
-   $ curl http://localhost
+   `$ curl http://localhost`
 
    
 ### Installation Webalizer
@@ -251,9 +251,6 @@ Die Installation ist fast ähnlich wie beim Apache2.
 2. Nun wird Webalizer installiert
    
    $ sudo apt-get install -y webalizer
-
-
-
 
 
 Vagrant Befehle
