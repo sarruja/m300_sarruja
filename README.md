@@ -85,28 +85,28 @@ GitHub
     $ cd Pfad/von/Repository
   2. Fügt Dateien zum Uploaden hinzu; für alle Dateien, eifach `<Dateipfad>` durch ``-A_``
    
-    `$ git add <Dateipfad>`
+    $ git add <Dateipfad>
   3. Upload commiten    
    
-    `$ git commit -m "Ein Kommentar" `
+    $ git commit -m "Ein Kommentar" 
   4. Zum Schluss den Upload pushen
    
-    `$ git push`
+    $ git push
 
   Schon hat man das Repository hochgeladen. Hier noch wenige weitere Befehele:
 
    - um Stauts anzuzeigen
   
-    `$ git status`
+    $ git status
    - gwünschtes Verzeichnis gehen
   
-    `$ cd gewünschter/Pfad/eingeben`
+    $ cd gewünschter/Pfad/eingeben
    - Order erstellen     
   
-    `$ mkdir Ordername`
+    $ mkdir Ordername
    - Lokales Repository aktualisieren
   
-    `$ git pull`
+    $ git pull
 
 Weitere Befehle findet man im Internet, wie zum Beispiel das Cheetsheet [hier](https://rogerdudler.github.io/git-guide/).
       
@@ -117,15 +117,15 @@ SSH Key für Client erstellen
 1. Git Bash öffnen
 2. Folgenden Befehl ausführen
  
-  `$  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com" `
+  $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 3. Neuer SSH-Key wird erstellen. Es erscheint:
   
-  `$ Generationg public/private rsa key pair`
+  $ Generationg public/private rsa key pair
 4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-  `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
+  $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
 5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
-  `$ Enter passphrase (empty for no passphrase): [Passwort]`
-  `$ Enter same passphrase again: [Passwort wiederholen]`
+  $ Enter passphrase (empty for no passphrase): [Passwort]
+  $ Enter same passphrase again: [Passwort wiederholen]
    
 - **SSH-Key dem Agent hinzufügen**
 1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
@@ -157,7 +157,7 @@ _File --> Preferences --> Setting_. Dort scrollt man wenig runter, bis man den B
 
   `"**/.hg": true,`
 
-  `**/.vagrant": true,`
+  `"**/.vagrant": true,`
 
   `"**/.DS_Store": true`
 
