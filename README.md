@@ -113,11 +113,9 @@ SSH Key für Client erstellen
 2. Folgenden Befehl ausführen
  
   `$  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
-
 3. Neuer SSH-Key wird erstellen. Es erscheint:
   
   `$ Generationg public/private rsa key pair`
-
 4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
   
   `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
