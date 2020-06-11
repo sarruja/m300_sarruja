@@ -306,7 +306,9 @@ Das Vagrantfile würde in etwa so aussehen:
 ```
 $ config.vm.provsion "shell", path: "Provision/befehle.sh"
 
-   #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens   #"Provision" und dort drin befindet sich das Befehle.sh File.  
+   #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens   
+   
+   #Provision" und dort drin befindet sich das Befehle.sh File.  
 ```   
    
  
