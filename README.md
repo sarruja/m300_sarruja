@@ -197,7 +197,9 @@ Vagrant hilft uns dabei, einfach und automatisiert eine Virtuelle Maschiene zu e
 So bald man sich damit ein wenig beschäftigt hat, kann man viele VMs, eifach und schnell installieren. 
 
 ### Versionsverwaltung / Git
-
+Versionsverwaltung ist ein System (engl. Version Contrlo System, VCS), welche die Änderungen protokolliert, damit man später auf gewisse Versionen zugreifen kann.  
+Dies kann sehr hilfreich sein, wenn man etwas hochlädt, diese aber komplett falsch ist, kann man ganz einfach auf die letzte Version zurückgreifen mit geringem Aufwand.  
+So ist auch Github, das System, in dem Sie gerade das am Text lesen sind :).
 
 
 ### Mark down
