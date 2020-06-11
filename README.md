@@ -117,23 +117,24 @@ SSH Key für Client erstellen
 
   1. Git Bash öffnen
   2. Folgenden Befehl ausführen
-   
-     `$ ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"`
+   ```
+     ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 
   3. Neuer SSH-Key wird erstellen. Es erscheint:
-    
-     `$ Generationg public/private rsa key pair`
-
+    ```
+     $ Generationg public/private rsa key pair
+   ```
   4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-    
-     `$ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]`
+    ```
+     $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
+    ``` 
 
   5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
-     
-     `$ Enter passphrase (empty for no passphrase): [Passwort]`
+    ``` 
+     $ Enter passphrase (empty for no passphrase): [Passwort]
 
-     `$ Enter same passphrase again: [Passwort wiederholen]`
-     
+     $ Enter same passphrase again: [Passwort wiederholen]
+    ``` 
   - **SSH-Key dem Agent hinzufügen**
   1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
 
@@ -159,13 +160,9 @@ Gewisse Dateien, wie die von den virtuellen Maschienen sollten nicht ins Reposit
 _File --> Preferences --> Setting_. Dort scrollt man wenig runter, bis man den Bereich _Files: Exclude_findet. Da kann man dann folgendes einzeln hinzufügen (Add Pattern auswählens), damit sie exkludiert werden.
 ```
   "**/.git": true,
-
   "**/.svn": true,
-
   "**/.hg": true,
-
   "**/.vagrant": true,
-
   "**/.DS_Store": true
 ```
 Repository hinzufügn unsh pushen
@@ -225,32 +222,43 @@ VM aus Vagrant-Cloud einrichten
 In der [Vagrant-Cloud](https://app.vagrantup.com/boxes/search), gibt es einige VM die bereit sind installiert zu werden.
 Ich habe mich für das ubuntu/xenial entschieden.
 
-Zuerst habe ich in meinem Repository mit `mkdir MeineVagrantVM` einen neuen Order gemacht.
+Zuerst habe ich in meinem Repository mit einen neuen Order namens MeineVagrant VM erstellt.   
+Anschliessend habe ich in das Verzeichnis gewechselt   
+Dort habe ich mit Hilfe ein Vagrant File angelegt.   
+Sobald das gemacht ist kann ich die VM starten. Wenn Sie nun VirtualBox öffnen, sehen Sie auch die erstelle und gestartete VM.   
+Sobald Sie gestartet ist, kann man eine SSH-Verbindung aufbauen.  
+Hier sind die einzelnen Befehle, für die oben beschriebenen Schritte (ohne #ausführen):
 
-Anschliessend habe ich in das Verzeichnis gewechselt: `cd MeineVagrantVM`
+```
+   mkdir MeineVagrantVM  #Order erstellen     
+   cd MeineVagrantVM  #Verzeichnis wechseln     
+   Vagrant init ubuntu/xenial64  #Vagrantfile anlegen   
+   vagrant up  #VM starten   
+   vagrant ssh  #SSH-Verbindung aufbauen   
+```
 
-Dort habe ich mit Hilfe von dem Befehl `Vagrant init ubuntu/xenial64` ein Vagrant File angelegt.
+
 
 Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.
 
-Sobald das gemacht ist kann man die VM mit `vagrant up` starten.
-Wenn Sie nun VirtualBox öffnen, so sehen Sie auch die erstellte und gestartete VM.
 
-Mit `vagrant SSH`kann man eine SSH-Verbindung zur VM aufbauen.
 
 ### Installation Apache2
 Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
 
 1. Ubuntu Paketquellen aktulisieren
-   
-   `$ sudo apt-get update`
+   ```
+    $ sudo apt-get update
+   ``` 
 2. Nun wird Apache installiert
-   
-   `$ sudo apt-get install -y apache2`
+   ```
+    $ sudo apt-get install -y apache2
+   ``` 
 
 3. Den Erfolg kann man mit dem folgenden Befehl testen:
-
-   `$ curl http://localhost`
+   ```
+    $ curl http://localhost
+   ``` 
 
    
 ### Installation Webalizer
@@ -259,13 +267,13 @@ Sie erstellt Statistiken über Anfragen, Besuche, Verweise, Länder der Besucher
 
 Die Installation ist fast ähnlich wie beim Apache2.
 1. Zuerst aktualisiert man  die Paketquellen. Wenn der Befehl erst gerade durchgeführt wurde, muss man ihn nicht nochmals ausführen.
-   
-   `$ sudo apt-get update`
-
+``` 
+   $ sudo apt-get update
+```
 2. Nun wird Webalizer installiert
-   
+```   
    `$ sudo apt-get install -y webalizer`
-
+```
 
 Vagrant Befehle
 ----
@@ -330,37 +338,48 @@ Sicherheitsaspekte
 
 Firewall inkl. Rules einrichten
 ----
-Wir bauen wieder eine SSH verbindung auf mit der erstellten VM `vagrant ssh`
-
+Wir bauen wieder eine SSH verbindung auf mit der erstellten VM 
+```
+   vagrant ssh`
+```
 Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
-
-   `$ netstat -tulpen`
+```
+   $ netstat -tulpen
+```
 
 1. Um die Firewall einzurichten, muss man sie zuerst installieren.
-   `$ sudo apt-get install`
-
+```
+   $ sudo apt-get install
+```
 2. Bevor ich sie nun starte, richte ich die Regeln ein.
 
    Port 80 (HTTP) für alle öffnen:
-
-   `sudo ufw allow 80/tcp`
+```
+   sudo ufw allow 80/tcp
+```
 
    Port 22 (SSH) für die Host, auf dem die VM lauft, öffnen:
 
-   `w` diese gibt eine IP aus, diese bruachen die dann für den nächsten Befehl under [Host-IP]  
-   `sudo ufw allow from [Host-IP] to any port 22`
+   `w` diese gibt eine IP aus, diese bruachen die dann für den nächsten Befehl under `[Host-IP]`  
+   ```
+      sudo ufw allow from [Host-IP] to any port 22
+   ```
 
    Port 3306 (MySQL) nur für den Webserver öffnen
-   `sudo ufw allow from [IP Web-VM] to any port 3306`
-
+   ```
+      sudo ufw allow from [IP Web-VM] to any port 3306
+   ```
    Ausgehende Verbindungen sind standartmässig erlauben. Werden die Verbindungen nach Aussen nicht benötigt oder nur wenig bestimmte, so kann man alle schliessen und die einzelnen öffnen.
-
-   `sudo ufw deny ou to any`  
-   `sudo ufw allow out 22/tcp`
+   ```
+      sudo ufw deny ou to any    
+      sudo ufw allow out 22/tcp
+   ```
 3. mit `exit` können Sie die Verbindung verlassen und dann wieder versuchen eine Verbindung aufzubauen.
 4. Falls Sie eine Regel löschen wollen:
-   `sudo ufw status numbred`
-   `sudo ufw delete [number]`  
+   ```
+      sudo ufw status numbred   
+      sudo ufw delete [number]  
+   ```
 
 Reverse-Proxy einrichten
 ----
