@@ -340,7 +340,7 @@ Firewall inkl. Rules einrichten
 ----
 Wir bauen wieder eine SSH verbindung auf mit der erstellten VM 
 ```
-   vagrant ssh
+   $ vagrant ssh
 ```
 Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
 ```
@@ -355,30 +355,30 @@ Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
 
    Port 80 (HTTP) für alle öffnen:
 ```
-   sudo ufw allow 80/tcp
+   $ sudo ufw allow 80/tcp
 ```
 
    Port 22 (SSH) für die Host, auf dem die VM lauft, öffnen:
 
    `w` diese gibt eine IP aus, diese bruachen die dann für den nächsten Befehl under `[Host-IP]`  
    ```
-      sudo ufw allow from [Host-IP] to any port 22
+     $ sudo ufw allow from [Host-IP] to any port 22
    ```
 
    Port 3306 (MySQL) nur für den Webserver öffnen
    ```
-      sudo ufw allow from [IP Web-VM] to any port 3306
+     $ sudo ufw allow from [IP Web-VM] to any port 3306
    ```
    Ausgehende Verbindungen sind standartmässig erlauben. Werden die Verbindungen nach Aussen nicht benötigt oder nur wenig bestimmte, so kann man alle schliessen und die einzelnen öffnen.
    ```
-      sudo ufw deny ou to any    
-      sudo ufw allow out 22/tcp
+     $ sudo ufw deny ou to any    
+     $ sudo ufw allow out 22/tcp
    ```
 3. mit `exit` können Sie die Verbindung verlassen und dann wieder versuchen eine Verbindung aufzubauen.
-4. Falls Sie eine Regel löschen wollen:
+4. Falls Sie eine Regel löschen wollen
    ```
-      sudo ufw status numbred   
-      sudo ufw delete [number]  
+     $ sudo ufw status numbred   
+     $ sudo ufw delete [number]  
    ```
 
 Reverse-Proxy einrichten
