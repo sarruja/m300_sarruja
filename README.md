@@ -28,7 +28,7 @@ SarrujaSabesan_ST17b
     - [Installation Apache2](#installation-apache2)
     - [Installation Webalizer](#installation-webalizer)
   - [Vagrant Befehle](#vagrant-befehle)
-      - [Vagrant File](#vagrant-file)
+    - [Vagrant File](#vagrant-file)
   - [Umgebungsvariabeln](#umgebungsvariabeln)
   - [Netwerkplan](#netwerkplan)
   - [Sicherheitsaspekte](#sicherheitsaspekte)
@@ -278,7 +278,7 @@ Vagrant Befehle
 - VM neustarten: `vagrant reload`
 - VM komplett löschen: `vagrant destroy`  
 
-#### Vagrant File
+### Vagrant File
 Nun wenn ich den Befehl `vagrant up` eingebe, so wird das Vagrantfile, welche sich in demORder befinde wo ich mich gerade im GitBash befinde ausgeführt. Die gesamte VM Konfiguration ist im Vagrantfile. Schauen wir uns einige Befehle an:
 **Konfigurationen**  
 
@@ -306,7 +306,7 @@ Das Vagrantfile würde in etwa so aussehen:
 ```
 $ config.vm.provsion "shell", path: "Provision/befehle.sh"
 
-   #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens #"Provision" und dort drin befindet sich das Befehle.sh File.  
+   #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens   #"Provision" und dort drin befindet sich das Befehle.sh File.  
 ```   
    
  
