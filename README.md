@@ -71,11 +71,11 @@ GitHub
    _Client konfigurieren_
    
   Nun muss man den Client mit unserem Gothub-Account Konfigurieren. Dies erfolgt mit den folgenden zwei Befehlen:
-  
-  `$ git config --global user.name "<username>"`
+```
+  $ git config --global user.name "<username>"
 
-  `$ git config --global user.email "<e-mail>"`
-
+  $ git config --global user.email "<e-mail>"
+```
    Schon ist man mit der Konfiguration fertig.
 
    **einige wichtige Git-Client Befehle:**
@@ -157,17 +157,17 @@ Anschliessend fügt man drei Extension hinzu: Markdown All in One, Vagrant Exten
 
 Gewisse Dateien, wie die von den virtuellen Maschienen sollten nicht ins Repository hochgelande werden, da sie zu gross sind. Dafür muss man unter 
 _File --> Preferences --> Setting_. Dort scrollt man wenig runter, bis man den Bereich _Files: Exclude_findet. Da kann man dann folgendes einzeln hinzufügen (Add Pattern auswählens), damit sie exkludiert werden.
+```
+  "**/.git": true,
 
-  `"**/.git": true,`
+  "**/.svn": true,
 
-  `"**/.svn": true,`
+  "**/.hg": true,
 
-  `"**/.hg": true,`
+  "**/.vagrant": true,
 
-  `"**/.vagrant": true,`
-
-  `"**/.DS_Store": true`
-
+  "**/.DS_Store": true
+```
 Repository hinzufügn unsh pushen
 ---
 Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein Repository hinzufügen und lernen wie man diesen pushen kann.
@@ -248,7 +248,7 @@ Die Installation vom Apache2 ist ganz schnell und einfach gemacht.
    
    `$ sudo apt-get install -y apache2`
 
-Den Erfolg kann man mit dem folgenden Befehl testen:
+3. Den Erfolg kann man mit dem folgenden Befehl testen:
 
    `$ curl http://localhost`
 
@@ -287,11 +287,11 @@ $ Vagrant.configure(2) do |Config|
 
   unter diesen Punkt gehören Konfigurationen von der VM, wie zum Beispiel  
   Hostname, Provider (wie Virtualbox), IP, RAM, welche Vagrantbox man verwendet,...  
-end # damit beendet man die Konfiguration  
+end  #damit beendet man die Konfiguration  
 
 ```
 **Provision**  
-
+```
 $ config.vm.provisionion "shell", inline <<-SHELL  
 
    Darin kommen die Befehle, welche man im TErminal in der VM normalerweise eingeben würden.  Beipsielsweise  
@@ -299,13 +299,15 @@ $ config.vm.provisionion "shell", inline <<-SHELL
    supo apt-get -y isntall apache2  
   SHELL  
   end 
+```
 
 Im oberen Beipsiel, schreibt man die Befehle direkt in Vagrant File. Dies können wir aber auch anders lösen. Undzwar in dem wir eine neue .sh Datei erstellen und diese Angeben. In diesem .sh File stehen dann nur die SHELL Befehle wie sudu apt-get update und eine Zeile weiter unten der nächste Befehl.  
 Das Vagrantfile würde in etwa so aussehen:  
+```
 $ config.vm.provsion "shell", path: "Provision/befehle.sh"
 
    #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens #"Provision" und dort drin befindet sich das Befehle.sh File.  
-   
+```   
    
  
 
