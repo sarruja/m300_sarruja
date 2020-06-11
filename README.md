@@ -13,28 +13,6 @@ SarrujaSabesan_ST17b
   - [GitHub Account erstellen](#github-account-erstellen)
   - [Git-Client](#git-client)
   - [SSH Key für Client erstellen](#ssh-key-für-client-erstellen)
-- [K2 - Eigene Lernumgebung (PLE) ist eingerichtet](#k2---eigene-lernumgebung-ple-ist-eingerichtet)
-  - [Markdown](#markdown)
-  - [Repository hinzufügn unsh pushen](#repository-hinzufügn-unsh-pushen)
-  - [Persönlicher Wissensstand](#persönlicher-wissensstand)
-    - [Linux](#linux)
-    - [Virtualisierung](#virtualisierung)
-    - [Vagrant](#vagrant)
-    - [Versionsverwaltung / Git](#versionsverwaltung--git)
-    - [Mark down](#mark-down)
-    - [Systemsycherheit](#systemsycherheit)
-- [K3 - Vagrant](#k3---vagrant)
-  - [VM aus Vagrant-Cloud einrichten](#vm-aus-vagrant-cloud-einrichten)
-    - [Installation Apache2](#installation-apache2)
-    - [Installation Webalizer](#installation-webalizer)
-  - [Vagrant Befehle](#vagrant-befehle)
-    - [Vagrant File](#vagrant-file)
-  - [Umgebungsvariabeln](#umgebungsvariabeln)
-  - [Netwerkplan](#netwerkplan)
-  - [Sicherheitsaspekte](#sicherheitsaspekte)
-- [K4 - Sicherheitsaspekte sind implementieren](#k4---sicherheitsaspekte-sind-implementieren)
-  - [Firewall inkl. Rules einrichten](#firewall-inkl-rules-einrichten)
-  - [Reverse-Proxy einrichten](#reverse-proxy-einrichten)
   - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
   - [Zugang mit SSH-Tunnel absichern](#zugang-mit-ssh-tunnel-absichern)
 
@@ -121,20 +99,20 @@ SSH Key für Client erstellen
      ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 
   3. Neuer SSH-Key wird erstellen. Es erscheint:
-    ```
+   ```
      $ Generationg public/private rsa key pair
    ```
   4. Es wird abgefrögt, unter welcem Name der Schlüssel gespeichert werden soll. Einfach Enter-Taste drücken für Standard Name
-    ```
+   ```
      $ Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
-    ``` 
+   ``` 
 
   5. Für den Key muss nun ein Passwort gesetzt werden. Man kann auch keines seztten und es leer lassen, ist aber nicht zu empfehlen
-    ``` 
+   ``` 
      $ Enter passphrase (empty for no passphrase): [Passwort]
 
      $ Enter same passphrase again: [Passwort wiederholen]
-    ``` 
+   ``` 
   - **SSH-Key dem Agent hinzufügen**
   1. Dafür muss man den Inhalt, welche sich in der Datei ``id_rsa.pub`` befindet kopieren.
 
@@ -272,7 +250,7 @@ Die Installation ist fast ähnlich wie beim Apache2.
 ```
 2. Nun wird Webalizer installiert
 ```   
-   `$ sudo apt-get install -y webalizer`
+   $ sudo apt-get install -y webalizer
 ```
 
 Vagrant Befehle
@@ -340,7 +318,7 @@ Firewall inkl. Rules einrichten
 ----
 Wir bauen wieder eine SSH verbindung auf mit der erstellten VM 
 ```
-   vagrant ssh`
+   vagrant ssh
 ```
 Mit dem folgenden Befehl, werden die offnen Befehel ausgegeben.
 ```
