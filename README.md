@@ -28,6 +28,7 @@ SarrujaSabesan_ST17b
     - [Installation Apache2](#installation-apache2)
     - [Installation Webalizer](#installation-webalizer)
   - [Vagrant Befehle](#vagrant-befehle)
+      - [Vagrant File](#vagrant-file)
   - [Umgebungsvariabeln](#umgebungsvariabeln)
   - [Netwerkplan](#netwerkplan)
   - [Sicherheitsaspekte](#sicherheitsaspekte)
@@ -276,6 +277,28 @@ Vagrant Befehle
 - VM stoppen/ herunterfahren: `vagrant halt`
 - VM neustarten: `vagrant reload`
 - VM komplett löschen: `vagrant destroy`  
+
+#### Vagrant File
+Nun wenn ich den Befehl `vagrant up` eingebe, so wird das Vagrantfile, welche sich in demORder befinde wo ich mich gerade im GitBash befinde ausgeführt. Die gesamte VM Konfiguration ist im Vagrantfile. Schauen wir uns einige Befehle an:
+**Konfigurationen**
+$ Vagrant.configure(2) do |Config|
+  unter diesen Punkt gehören Konfigurationen von der VM, wie zum Beispiel  
+  Hostname, Provider (wie Virtualbox), IP, RAM, welche Vagrantbox man verwendet,...
+end # damit beendet man die Konfiguration  
+**Provision**
+$ config.vm.provisionion "shell", inline <<-SHELL
+   Darin kommen die Befehle, welche man im TErminal in der VM normalerweise eingeben würden. Beipsielsweise
+   sudp apt-get update
+   supo apt-get -y isntall apache2  
+  SHELL
+  end 
+
+Im oberen Beipsiel, schreibt man die Befehle direkt in Vagrant File. Dies können wir aber auch anders lösen. Undzwar in dem wir eine neue .sh Datei erstellen und diese Angeben. In diesem .sh File stehen dann nur die SHELL Befehle wie sudu apt-get update und eine Zeile weiter unten der nächste Befehl.  
+Das Vagrantfile würde in etwa so aussehen:
+$ config.vm.provsion "shell", path: "Provision/befehle.sh"
+   #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer ORnder namens #"Provision" und dort drin befindet sich das Befehle.sh File.  
+   
+   
  
 
 Umgebungsvariabeln
