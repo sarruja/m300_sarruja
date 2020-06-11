@@ -282,12 +282,14 @@ Vagrant Befehle
 Nun wenn ich den Befehl `vagrant up` eingebe, so wird das Vagrantfile, welche sich in demORder befinde wo ich mich gerade im GitBash befinde ausgeführt. Die gesamte VM Konfiguration ist im Vagrantfile. Schauen wir uns einige Befehle an:
 **Konfigurationen**  
 
-``$ Vagrant.configure(2) do |Config|  
+```
+$ Vagrant.configure(2) do |Config|  
 
   unter diesen Punkt gehören Konfigurationen von der VM, wie zum Beispiel  
   Hostname, Provider (wie Virtualbox), IP, RAM, welche Vagrantbox man verwendet,...  
-end # damit beendet man die Konfiguration ``  
+end # damit beendet man die Konfiguration  
 
+```
 **Provision**  
 
 $ config.vm.provisionion "shell", inline <<-SHELL  
