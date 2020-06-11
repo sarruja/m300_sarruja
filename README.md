@@ -307,7 +307,7 @@ Das Vagrantfile würde in etwa so aussehen:
 $ config.vm.provsion "shell", path: "Provision/befehle.sh"
 
    #In diesem Fall gibt es in dem Ordner wo sich das Vagrantfile befindet ein weiterer Ordner namens   
-   
+
    #Provision" und dort drin befindet sich das Befehle.sh File.  
 ```   
    
@@ -367,21 +367,31 @@ Reverse-Proxy einrichten
 Der Webserver kann man auch als einen Reverse Proxy eingerichtete werden.
 
 1. Zuerst muss man folgendes installieren:  
-   `sudo apt-get isntall libapache2-mod-proxy-html`<-- Dies ist schon im apache2-bin entahalten  
-   `sudo apt-get install libxml2-dev`
-
+  ``` 
+   sudo apt-get isntall libapache2-mod-proxy-html <-- Dies ist schon im apache2-bin entahalten  
+   sudo apt-get install libxml2-dev
+   ```
 2. Die Modulue müssen nun aktiviert werden:  
-   `sudo a2enmod proxy`  --> danach ist ein `sudo service apache2 restart` mahcen. Kann aber auch nach der aktivierung der drei Module gemacht werden.  
-   `sudo a2enmod proxy_html`  
-   `sudo a2enmod proxy_http`  
+  ``` 
+   sudo a2enmod proxy  mahcen. Kann aber auch nach der aktivierung der drei Module gemacht werden.  
+   sudo a2enmod proxy_html  
+   sudo a2enmod proxy_http  
+   sudo service apache2 restart
+  ``` 
 
 3. Gehen sie nun in das Verzeichnis `cd etc/apache2` und öffnen sie das folgende Dokument mit dem folgenden Befehl  
-   `sudo nano apache2.conf`  
+  ``` 
+   sudo nano apache2.conf 
+  ```   
    Ergänzen sie das File wie gefolgt  
-   `ServerName localhost`
+  ```
+   ServerName localhost
+  ```
 
-5. Apache-Webserver muss nun neugestartet werden:  
-   `sudo service apache2 restart`
+4. Apache-Webserver muss nun neugestartet werden:  
+  ```
+   sudo service apache2 restart
+  ``` 
 
 Benutzer- und Rechtevergabe eingerichten
 ----
