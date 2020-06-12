@@ -429,4 +429,4 @@ Nach der Installation habe ich einzige Tests durchgefüht:
 |localhost:80/adminer.php im Browser eingeben | Adminer.php Seite öffnet sich|  |    
 |Kann mich auf der Adminer Seite anmelden | Anmeldung miit root und entprechendem PW möglich|  |   
 |Erstellte DB ist auf dem UI sichtbar | M300_db ist unter Datenbank sichtbar |  |
-|Firewall ist aktiv| Firewall zeigt die rules bei eingabe bei 'sudo ufw status|   |
+|Firewall ist aktiv| Firewall zeigt die rules bei eingabe bei 'sudo ufw status'|   |
