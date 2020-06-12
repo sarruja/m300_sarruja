@@ -1,10 +1,7 @@
-# m300_sarruja
-SarrujaSabesan_ST17b
 # Dokumentation - M300 LB2
 ## von Sarruja Sabesan
 
 # Inhaltsverzeichnis
-- [m300_sarruja](#m300_sarruja)
 - [Dokumentation - M300 LB2](#dokumentation---m300-lb2)
   - [von Sarruja Sabesan](#von-sarruja-sabesan)
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
@@ -37,6 +34,7 @@ SarrujaSabesan_ST17b
   - [Reverse-Proxy einrichten](#reverse-proxy-einrichten)
   - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
   - [Zugang mit SSH-Tunnel absichern](#zugang-mit-ssh-tunnel-absichern)
+  - [Testen](#testen)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -421,3 +419,6 @@ Benutzer- und Rechtevergabe eingerichten
 Zugang mit SSH-Tunnel absichern
 ----
 
+Testen
+----
+Die nötigen Befehle habe ich ins Vagrent File hizugeüfgt.
