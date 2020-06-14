@@ -263,12 +263,12 @@ Hier sind die einzelnen Befehle, für die oben beschriebenen Schritte (ohne #aus
    vagrant ssh  #SSH-Verbindung aufbauen   
 ```
 
-So funktioniert das:
+
+Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.   
+
+**Funktionsweise**
 
 ![Vagrant Funktionsweise](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Vagrant_Funkionsweise.png "Vagrant Funktionsweise")
-
-Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.
-
 
 
 ### Installation Apache2
@@ -356,7 +356,7 @@ Umgebungsvariabeln
 
 Netwerkplan
 ----
-MEINE UMGEBUNG:
+**Meine Umgebung**
 ![Netzwerkplan](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Netzwerkplan.png "Netzwerkplan")
 
 
@@ -445,6 +445,38 @@ Der Webserver kann man auch als einen Reverse Proxy eingerichtete werden.
 
 Benutzer- und Rechtevergabe eingerichten
 ----
+**Benutzer**    
+Linux ist ein Mulituser-Betriebssystem. Das heisst, an meiner VM kann es mehrere Benutzer haben, die auch andere Berechtigungen haben. Jeder Benutzer hat eine ID, die man UID (User-ID) nennt.    
+Neben den Benutzer die wie erstellen, gobt es bereits erstellte Benutzer wie zum Beispiel:
+* Systemverwalter (hatte alle Rechte) `root` 
+* Webservers Apache Benutzer `www-data`
+* Benutzer des Druckdienstes CUPS `cupsys`
+
+Die verschiedene Benutzer stehen in der Datei `/etc/passwd`. Deren Passwörter befindet sich in der Datei `/etc/shadow`.   
+
+**Gruppen**    
+Jeder Benutzer gehört zu einer oder mehreren Gruppen. Auch jede Gruppe hat wie ein Benutzer eine ID, die man GID (Group-ID) nennt. Die Rechte werden jeweils der Gruppe zugeteilt.   
+Die Gruppen stehen in der Datei `/etc/group`.     
+
+**Berechtigungen**
+- **r** - Lesen (read)
+    - Erlautbt es eine Datei zu lesen. Beim Verzeichnis, können die entahltenen Dateien und Ordner abgerufen werden.
+- **w** - Schreiben (write)
+    - Erlaut es in eine Datei zu schreiben. Beim Verzeichnis können Dateien und Ordner hinzugefügt werden.
+- **x** - Ausführen (execute)
+    - Erlaubt es eine Datei/Programm auszuführen.
+- **s** - Set-UID-Recht (SUID-Bit)
+    - Sie sorgt dafür, dass man das Orogramm immer mit den Rechten des Dateibesitzer ausführt. Daüfür ist auch das Ausführungsrecht nötig.    
+- **S** - Set GID-Bit
+    - Hat die gleiche Funktion wie das SUID-Bit, einfach das sie mit der REchten der Dateigruppe läauft.
+- **T** - Sticky-Bit
+    - Diese wird auf einem Ornder angewandt, damit die darin erstellten Verzeichnisse und Dateien nur vom Dateibesitzer gelöscht oder unbennent werden können.
+
+Zum ändern der Rechte, werden folgende Befehle benutzt:
+- Zum Setzten der Dateirecht `chmod`
+- Zum Ändern des Dateibesitzer `chown`
+- Zum Ändern der Gruppe der Datei `chgrp`
+
 
 
 Zugang mit SSH-Tunnel absichern
@@ -456,4 +488,5 @@ Die nötigen Befehle habe ich ins Vagrent File hizugeüfgt.
 Nach der Installation habe ich einzige Tests durchgefüht:  
 |Testfall|Erwartetes Reslutat|OK/nOK|
 |:------:|:-----------------:|:----:|
-|192.168.50.100:8080 im Browser eingeben|Apache2 Default Page öffnet sich|  |   
+|192.168.50.100:8080 im Browser eingeben|Apache2 Default Page öffnet sich|  |
+   
