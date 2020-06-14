@@ -208,7 +208,7 @@ Beim Hypervisor Typ 1 dient der Hypervisor selbst als ein Betriebssytem. Der Vor
 Im Gegensatz zum anderen braucht dieser Hypervisor TYP-II ein Basis Betriebssystem, wie ein Programm kann man das vergleichen, welsches innerhalb eins Betriebssystems installiert wird. Der Vorteil ist jedoch, er braucht keine spezielle Hardware. Wird oft für Dekstop Virtualisierung benutzt. Beakannte Produkte sind VirtualBox und VMware.
 
 
-![Hypervisor Typ1 und Typ2 Vergleich](https://github.com/sarruja/m300_sarruja/Bilder/Hypervisor_typ1_typ2.png "Hypervisor Typ1 und Typ2 Vergleich")
+![Hypervisor Typ1 und Typ2 Vergleich](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Hypervisor_typ1_typ2.png "Hypervisor Typ1 und Typ2 Vergleich")
 
 Für dises Modul benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die virtuellen Maschinen laufen, die mithilfe vom Vagrantfile erstellt werden.
 
@@ -265,7 +265,7 @@ Hier sind die einzelnen Befehle, für die oben beschriebenen Schritte (ohne #aus
 
 So funktioniert das:
 
-![Vagrant Funktionsweise](https://github.com/sarruja/m300_sarruja/Bilder/Vagrant_Funktionsweise.png "Vagrant Funktionsweise")
+![Vagrant Funktionsweise](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Vagrant_Funkionsweise.png "Vagrant Funktionsweise")
 
 Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.
 
@@ -357,7 +357,7 @@ Umgebungsvariabeln
 Netwerkplan
 ----
 MEINE UMGEBUNG:
-![Netzwerkplan](https://github.com/sarruja/m300_sarruja/Bilder/Netzwerkplan.png "Netzwerkplan")
+![Netzwerkplan](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Netzwerkplan.png "Netzwerkplan")
 
 
 Sicherheitsaspekte
