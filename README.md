@@ -20,7 +20,7 @@
         - [Hypervisor Typ 2](#hypervisor-typ-2)
     - [Vagrant](#vagrant)
     - [Versionsverwaltung / Git](#versionsverwaltung--git)
-    - [Mark down](#mark-down)
+    - [Markdown](#markdown-1)
     - [Systemsycherheit](#systemsycherheit)
 - [K3 - Vagrant](#k3---vagrant)
   - [VM aus Vagrant-Cloud einrichten](#vm-aus-vagrant-cloud-einrichten)
@@ -185,7 +185,18 @@ Persönlicher Wissensstand
 
 ### Linux
 Linuy ist ein Kernel, weöches für ein Betriebssystem zur Verfügung gestellt wrid, wie beispielsweise für Ubuntu. Linux ist Open Source und ist somit kostenlos.
-Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen. 
+Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen.   
+Mit Linux habe ich persönlich nicht viel zu tun. Nichts desto trotzt sind hier einige Basic-Command die sehr ntzlich sind:
+- Verzeichnis ändern `Cd`
+- Inhlat anzeigen, welche sich im Directory befindet `ls -l`
+- Order erstellen `mkdir`
+- Datei löschen `rm`
+- Verzeichnis löschen `rmdir`
+- Berechtigungen ändern `chmod`
+- Update durchführen `sudo apt-get update`
+- Befehle also admin auführen `sudo` 
+  
+Das sind nur wenige von vielen Befehle.  
 
 ### Virtualisierung
 Eine Virtuelle Maschiene (abkürzung VM) ist ein Computer oder Server, der auch genau gleich funktioniert, mit der Aussnahme, das keine eigenen Hardware besitzt. Er bezieht die nötigen Ressourcen vom Host.  
@@ -197,7 +208,7 @@ Beim Hypervisor Typ 1 dient der Hypervisor selbst als ein Betriebssytem. Der Vor
 Im Gegensatz zum anderen braucht dieser Hypervisor TYP-II ein Basis Betriebssystem, wie ein Programm kann man das vergleichen, welsches innerhalb eins Betriebssystems installiert wird. Der Vorteil ist jedoch, er braucht keine spezielle Hardware. Wird oft für Dekstop Virtualisierung benutzt. Beakannte Produkte sind VirtualBox und VMware.
 
 
-![Hypervisor Typ1 und Typ2 Vergleich](https://cloudgyan.files.wordpress.com/2014/09/0a34a-hostedvsbaremetal2_20090802212753.png "Hypervisor Typ1 und Typ2 Vergleich")
+![Hypervisor Typ1 und Typ2 Vergleich](https://github.com/sarruja/m300_sarruja/Bilder/Hypervisor_typ1_typ2.png "Hypervisor Typ1 und Typ2 Vergleich")
 
 Für dises Modul benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die virtuellen Maschinen laufen, die mithilfe vom Vagrantfile erstellt werden.
 
@@ -211,11 +222,12 @@ So bald man sich damit ein wenig beschäftigt hat, kann man viele VMs, eifach un
 ### Versionsverwaltung / Git
 Versionsverwaltung ist ein System (engl. Version Contrlo System, VCS), welche die Änderungen protokolliert, damit man später auf gewisse Versionen zugreifen kann.  
 Dies kann sehr hilfreich sein, wenn man etwas hochlädt, diese aber komplett falsch ist, kann man ganz einfach auf die letzte Version zurückgreifen mit geringem Aufwand.  
-So ist auch Github, das System, in dem Sie gerade das am Text lesen sind :).
+Ausserdem es ermöglicht auch den gemeinsamen Zugriff von mehreren Entwickler auf eine Datei.
 
+So ist auch Github.  
 
-### Mark down
-Markdown übersetzt einfach einen Text in HTML.
+### Markdown
+Markdown ist einfach gesagt ein Text in HTML Übersetzer. Die Markdown Dateien (.md, wie beispielsweise dieses README.md) kann mit VisualStudio, GitBook oder über die Weboberfläche GitLab editiert werden.
 Man kann auch Offline die Texte schreiben und publizieren, sobald man wieder Zugriff aufs Internet hat.
 Ich persönlich hatte noch nie in dieser Form eine Dokumentation geschrieben. Bisher nur auf Word oder GoogleDocs. Daher war das was ganz neues für mich.
 
@@ -251,7 +263,9 @@ Hier sind die einzelnen Befehle, für die oben beschriebenen Schritte (ohne #aus
    vagrant ssh  #SSH-Verbindung aufbauen   
 ```
 
+So funktioniert das:
 
+![Vagrant Funktionsweise](https://github.com/sarruja/m300_sarruja/Bilder/Vagrant_Funktionsweise.png "Vagrant Funktionsweise")
 
 Falls Sie eine andere VM möchten, so können Sie sich eine vond er [Vagrant-Cloud](https://app.vagrantup.com/boxes/search) auswählen und "ubuntu/xenial" entsprechend anpassen.
 
@@ -342,6 +356,9 @@ Umgebungsvariabeln
 
 Netwerkplan
 ----
+MEINE UMGEBUNG:
+![Netzwerkplan](https://github.com/sarruja/m300_sarruja/Bilder/Netzwerkplan.png "Netzwerkplan")
+
 
 Sicherheitsaspekte
 ----
