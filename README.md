@@ -182,7 +182,7 @@ Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein R
 
 Persönlicher Wissensstand
 ----
-![alt text](https://de.wikipedia.org/wiki/Linux#/media/Datei:Tux.svg "Linux Logo")
+![Linux Logo](https://i1.wp.com/zigerschlitzmakers.ch/wp-content/uploads/2015/11/logo_Linux.png?resize=927%2C1024&ssl=1 "Linux Logo")
 ### Linux
 Linuy ist ein Kernel, weöches für ein Betriebssystem zur Verfügung gestellt wrid, wie beispielsweise für Ubuntu. Linux ist Open Source und ist somit kostenlos.
 Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen. 
@@ -197,7 +197,7 @@ Beim Hypervisor Typ 1 dient der Hypervisor selbst als ein Betriebssytem. Der Vor
 Im Gegensatz zum anderen braucht dieser Hypervisor TYP-II ein Basis Betriebssystem, wie ein Programm kann man das vergleichen, welsches innerhalb eins Betriebssystems installiert wird. Der Vorteil ist jedoch, er braucht keine spezielle Hardware. Wird oft für Dekstop Virtualisierung benutzt. Beakannte Produkte sind VirtualBox und VMware.
 
 
-![alt text](https://cloudgyan.files.wordpress.com/2014/09/0a34a-hostedvsbaremetal2_20090802212753.png "Hypervisor Typ1 und Typ2 Vergleich")
+![Hypervisor Typ1 und Typ2 Vergleich](https://cloudgyan.files.wordpress.com/2014/09/0a34a-hostedvsbaremetal2_20090802212753.png "Hypervisor Typ1 und Typ2 Vergleich")
 
 Für dises Modul benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die virtuellen Maschinen laufen, die mithilfe vom Vagrantfile erstellt werden.
 
