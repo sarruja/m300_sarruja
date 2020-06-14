@@ -16,6 +16,8 @@
   - [Persönlicher Wissensstand](#persönlicher-wissensstand)
     - [Linux](#linux)
     - [Virtualisierung](#virtualisierung)
+          - [Hypervisor Typ 1](#hypervisor-typ-1)
+          - [Hypervisor Typ 2](#hypervisor-typ-2)
     - [Vagrant](#vagrant)
     - [Versionsverwaltung / Git](#versionsverwaltung--git)
     - [Mark down](#mark-down)
@@ -181,12 +183,23 @@ Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein R
 Persönlicher Wissensstand
 ----
 ### Linux
-Linuy ist der Kernel des Betriebssystem und ist für die Kommunikation zwischen HW und SW zuständig.
-Linux wrid umfassend eingesetzt, unteranderem au Servern und Mobiltelefonen. 
+Linuy ist ein Kernel, weöches für ein Betriebssystem zur Verfügung gestellt wrid, wie beispielsweise für Ubuntu. Linux ist Open Source und ist somit kostenlos.
+Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen. 
 
 ### Virtualisierung
-Für die Virtualisierung benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die VMs laufen, die mithilfe vom Vagrantfile erstellt werden.
-Das tolle ist, das Virtualbox mit Vagrant kompatibel ist.
+Eine Virtuelle Maschiene (abkürzung VM) ist ein Computer oder Server, der auch genau gleich funktioniert, mit der Aussnahme, das keine eigenen Hardware besitzt. Er bezieht die nötigen Ressourcen vom Host.  
+Damit jedoch die die nötigen Ressourcen vom Host an die VM gehen, ist der Hypervisor zuständig. Er ist der Vermittler zwischen der VM und dem Host.  
+Der Hypervisor ist eine Software und auch bekannt als VMM (Mirtual Machine Monitor). Man unterscheidet zwischen *Typ 1 (Bare-Metal-Lösung)* und *Typ 2 (Hostes-Lösung)*.  
+###### Hypervisor Typ 1
+Beim Hypervisor Typ 1 dient der HYpervisor selbst als ein Betriebssytem. Der Vorteil dabei ist, das er schnell arbeiten kann, jedoch sind besondere Hardwareanforderungen nötig. Er wird oft für die Server-Virtualisierung eingesetzt. Bekannte Produkte sind Proxmox VE oder VMware vSphere.
+###### Hypervisor Typ 2
+Im Gegensatz zum anderen braucht dieser Hypervisor TYP-II ein Basis Betriebssystem, wie ein Programm kann man das vergleichen, welsches innerhalb eins Betriebssystems installiert wird. Der Vorteil ist jedoch, er braucht keine spezielle Hardware. Wird oft für Dekstop Virtualisierung benutzt. Beakannte Produkte sind VirtualBox und VMware.
+
+
+![alt text](https://cloudgyan.files.wordpress.com/2014/09/0a34a-hostedvsbaremetal2_20090802212753.png "Hypervisor Typ1 und Typ2 Vergleich")
+
+Für dises Modul benutzen wir Virtualbox. Mit Virtualbox hatte ich schon vor diesem Modul öfters gearbeitet und hatte keine Probleme. (VirtualBox habe ich auf der Seite https://www.virtualbox.org heruntergeladen.). Darauf werden dann die virtuellen Maschinen laufen, die mithilfe vom Vagrantfile erstellt werden.
+
 
 ### Vagrant
 Vagrant ist eine Anwendung zur Erstellen und Verwalten von VMs. Die anwendung wird über eine Shell gesteuert.
