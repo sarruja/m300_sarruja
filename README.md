@@ -16,8 +16,8 @@
   - [Persönlicher Wissensstand](#persönlicher-wissensstand)
     - [Linux](#linux)
     - [Virtualisierung](#virtualisierung)
-          - [Hypervisor Typ 1](#hypervisor-typ-1)
-          - [Hypervisor Typ 2](#hypervisor-typ-2)
+        - [Hypervisor Typ 1](#hypervisor-typ-1)
+        - [Hypervisor Typ 2](#hypervisor-typ-2)
     - [Vagrant](#vagrant)
     - [Versionsverwaltung / Git](#versionsverwaltung--git)
     - [Mark down](#mark-down)
@@ -182,6 +182,7 @@ Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein R
 
 Persönlicher Wissensstand
 ----
+![alt text](https://de.wikipedia.org/wiki/Linux#/media/Datei:Tux.svg "Linux Logo")
 ### Linux
 Linuy ist ein Kernel, weöches für ein Betriebssystem zur Verfügung gestellt wrid, wie beispielsweise für Ubuntu. Linux ist Open Source und ist somit kostenlos.
 Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen. 
@@ -190,9 +191,9 @@ Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen.
 Eine Virtuelle Maschiene (abkürzung VM) ist ein Computer oder Server, der auch genau gleich funktioniert, mit der Aussnahme, das keine eigenen Hardware besitzt. Er bezieht die nötigen Ressourcen vom Host.  
 Damit jedoch die die nötigen Ressourcen vom Host an die VM gehen, ist der Hypervisor zuständig. Er ist der Vermittler zwischen der VM und dem Host.  
 Der Hypervisor ist eine Software und auch bekannt als VMM (Mirtual Machine Monitor). Man unterscheidet zwischen *Typ 1 (Bare-Metal-Lösung)* und *Typ 2 (Hostes-Lösung)*.  
-###### Hypervisor Typ 1
-Beim Hypervisor Typ 1 dient der HYpervisor selbst als ein Betriebssytem. Der Vorteil dabei ist, das er schnell arbeiten kann, jedoch sind besondere Hardwareanforderungen nötig. Er wird oft für die Server-Virtualisierung eingesetzt. Bekannte Produkte sind Proxmox VE oder VMware vSphere.
-###### Hypervisor Typ 2
+##### Hypervisor Typ 1
+Beim Hypervisor Typ 1 dient der Hypervisor selbst als ein Betriebssytem. Der Vorteil dabei ist, das er schnell arbeiten kann, jedoch sind besondere Hardwareanforderungen nötig. Er wird oft für die Server-Virtualisierung eingesetzt. Bekannte Produkte sind Proxmox VE oder VMware vSphere.
+##### Hypervisor Typ 2
 Im Gegensatz zum anderen braucht dieser Hypervisor TYP-II ein Basis Betriebssystem, wie ein Programm kann man das vergleichen, welsches innerhalb eins Betriebssystems installiert wird. Der Vorteil ist jedoch, er braucht keine spezielle Hardware. Wird oft für Dekstop Virtualisierung benutzt. Beakannte Produkte sind VirtualBox und VMware.
 
 
