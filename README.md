@@ -182,7 +182,7 @@ Damit man jedoch auch die Dokumentation schreiben kann, musste ich zuerst mein R
 
 Persönlicher Wissensstand
 ----
-![Linux Logo](http://pngimg.com/uploads/linux/linux_PNG12.png "Linux Logo")
+
 ### Linux
 Linuy ist ein Kernel, weöches für ein Betriebssystem zur Verfügung gestellt wrid, wie beispielsweise für Ubuntu. Linux ist Open Source und ist somit kostenlos.
 Linux wrid umfassend eingesetzt, unteranderem auch Servern und Mobiltelefonen. 
