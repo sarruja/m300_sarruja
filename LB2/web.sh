@@ -3,7 +3,7 @@
 #Packete für Datenbankserver installieren
 
 		#Packete für Webserver installieren	
-		 sudo apt-get update
+		  sudo apt-get update
 		 sudo apt-get install -y apache2
 		 sudo apt-get install -y webalizer
 		
@@ -20,3 +20,8 @@
 		 sudo a2enmod proxy_html
 		 sudo a2enmod proxy_http
 		 sudo service apache2 restart
+		 
+		#Gruppen und Benutzer hinzufügen
+		 sudo adduser sarruja
+		 sudo addgroup m300
+		 sudo addgroup sarruja m300  #Benutzer in Gruppe hinzufügen

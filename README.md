@@ -28,7 +28,6 @@
     - [Installation Webalizer](#installation-webalizer)
   - [Vagrant Befehle](#vagrant-befehle)
     - [Vagrant File](#vagrant-file)
-  - [Umgebungsvariabeln](#umgebungsvariabeln)
   - [Netwerkplan](#netwerkplan)
   - [Sicherheitsaspekte](#sicherheitsaspekte)
 - [K4 - Sicherheitsaspekte sind implementieren](#k4---sicherheitsaspekte-sind-implementieren)
@@ -37,6 +36,9 @@
   - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
   - [Zugang mit SSH-Tunnel absichern](#zugang-mit-ssh-tunnel-absichern)
   - [Testen](#testen)
+- [K5 - Persönlicher Wissenzufacht](#k5---persönlicher-wissenzufacht)
+  - [Vergleich Vorwissen - Wissenszuwachs](#vergleich-vorwissen---wissenszuwachs)
+  - [Refelxion](#refelxion)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -347,13 +349,6 @@ $ config.vm.provsion "shell", path: "Provision/befehle.sh"
    #Provision" und dort drin befindet sich das Befehle.sh File.  
 ```   
    
- 
-
-Umgebungsvariabeln
-----
-
-
-
 Netwerkplan
 ----
 **Meine Umgebung**
@@ -362,7 +357,13 @@ Netwerkplan
 
 Sicherheitsaspekte
 ----
+Für die Sicherheit meier Umgebung, habe ich folgendes eingerichtet:
+- Firewall 
+- Reverse Proxy
 
+Dazu würde noch folgendes kommen
+- Dokumentation immer auf dem neusten Stand halten
+- Benutzer instruieren   
 
 # K4 - Sicherheitsaspekte sind implementieren
 
@@ -502,3 +503,17 @@ Nach der Installation habe ich einzige Tests durchgefüht:
 |4|Neuer Benutzer (sarruja) ist erstellt| Datei `/etc/passwd`öffnen und user sarruja suchen| sarruja ist in der Datei sichtbar| OK |
 |5|Neue Gruppe (m300) ist erstellt| Datei `/etc/group` öffnen und nach der Gruppe m300 suchen| m300 ist in der Datei sichtbar| OK |
 |6| Firewall ist aktiv| `sudo ufw status` ausführe| Meldung `Status: active` und die Rules werden angezeigt| OK |
+
+# K5 - Persönlicher Wissenzufacht
+
+## Vergleich Vorwissen - Wissenszuwachs
+Zu Beginn diese Moduls, hatte ich keine Ahnung was Vagant war und wozu es dient. Daher hatte ich auch ein wenig Schwirigkeiten am Anfang das Ganze zu verstehen. Mit der Zeit, habe ich es immer besser verstanden.    
+
+Auch mit Markdown und Github musste ich so noch nie arbeiten. Ich kann mich erinnern, das Lehrer Informationen und Anleitungen auf Github zu Verfügunge gestellt haben, dohc selber musste ich das nicht machen.   
+Doch mit der Anleitung, konnte ich mich schnell an diese Markdown Dokumentation dran gewöhnen.
+
+Schlussendlich bin ich der Meinung, dass ich in der LB2 vieles dazu gelernt habe.     
+
+## Refelxion
+Zu Beginn war ich mir nicht ganz sicher, was genau erwaret wird. Ich habe die Schritte vom Github durchgeführt, aber habe keinen Zusammenhan mit LB2 gefunden. Wahrscheinlich weil ich so verwirrt war. Je mehr ich mihc damit beschäft habe desto kalrer wurde alles. Auch das Bewertungsraster hat mir dabei geholfen. Für das nächste Mal hilft es, wenn ich mir zuerst alles studiere (auch das Bewertungsraster), damit ich shcon Beginn an eine Vorstellung haben, was von mir erwartet wird.     
+Schlussenldich bin ich trozdem zufrieden mit meine Leistung. 
