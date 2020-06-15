@@ -35,7 +35,7 @@
   - [Reverse-Proxy einrichten](#reverse-proxy-einrichten)
   - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
   - [Testen](#testen)
-- [K5 - Persönlicher Wissenzufacht](#k5---persönlicher-wissenzufacht)
+- [K5 - Persönliche Lernentwicklung](#k5---persönliche-lernentwicklung)
   - [Vergleich Vorwissen - Wissenszuwachs](#vergleich-vorwissen---wissenszuwachs)
   - [Refelxion](#refelxion)
 
@@ -499,7 +499,7 @@ Nach der Installation habe ich einzige Tests durchgefüht:
 |5|Neue Gruppe (m300) ist erstellt| Datei `/etc/group` öffnen und nach der Gruppe m300 suchen| m300 ist in der Datei sichtbar| OK |
 |6| Firewall ist aktiv| `sudo ufw status` ausführe| Meldung `Status: active` und die Rules werden angezeigt| OK |
 
-# K5 - Persönlicher Wissenzufacht
+# K5 - Persönliche Lernentwicklung
 
 ## Vergleich Vorwissen - Wissenszuwachs
 Zu Beginn diese Moduls, hatte ich keine Ahnung was Vagant war und wozu es dient. Daher hatte ich auch ein wenig Schwirigkeiten am Anfang das Ganze zu verstehen. Mit der Zeit, habe ich es immer besser verstanden.    
