@@ -34,7 +34,6 @@
   - [Firewall inkl. Rules einrichten](#firewall-inkl-rules-einrichten)
   - [Reverse-Proxy einrichten](#reverse-proxy-einrichten)
   - [Benutzer- und Rechtevergabe eingerichten](#benutzer--und-rechtevergabe-eingerichten)
-  - [Zugang mit SSH-Tunnel absichern](#zugang-mit-ssh-tunnel-absichern)
   - [Testen](#testen)
 - [K5 - Persönlicher Wissenzufacht](#k5---persönlicher-wissenzufacht)
   - [Vergleich Vorwissen - Wissenszuwachs](#vergleich-vorwissen---wissenszuwachs)
@@ -486,10 +485,6 @@ Zum ändern der Rechte, werden folgende Befehle benutzt:
 - Zum Ändern des Dateibesitzer `chown`
 - Zum Ändern der Gruppe der Datei `chgrp`
 
-
-
-Zugang mit SSH-Tunnel absichern
-----
 
 Testen
 ----
