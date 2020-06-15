@@ -452,10 +452,18 @@ Neben den Benutzer die wie erstellen, gobt es bereits erstellte Benutzer wie zum
 * Webservers Apache Benutzer `www-data`
 * Benutzer des Druckdienstes CUPS `cupsys`
 
+Mit dem folgenden Befehl, kann mann einen neuen Benutzer erstellen:    
+```
+  $sud adduser username
+```     
 Die verschiedene Benutzer stehen in der Datei `/etc/passwd`. Deren Passwörter befindet sich in der Datei `/etc/shadow`.   
 
 **Gruppen**    
 Jeder Benutzer gehört zu einer oder mehreren Gruppen. Auch jede Gruppe hat wie ein Benutzer eine ID, die man GID (Group-ID) nennt. Die Rechte werden jeweils der Gruppe zugeteilt.   
+Mit dem folgenden Befehl, kann mann eine neue Gruppe erstellen:    
+```
+  $sud addgroup gruppennamen
+``` 
 Die Gruppen stehen in der Datei `/etc/group`.     
 
 **Berechtigungen**
@@ -486,7 +494,11 @@ Testen
 ----
 Die nötigen Befehle habe ich ins Vagrent File hizugeüfgt.  
 Nach der Installation habe ich einzige Tests durchgefüht:  
-|Testfall|Erwartetes Reslutat|OK/nOK|
-|:------:|:-----------------:|:----:|
-|192.168.50.100:8080 im Browser eingeben|Apache2 Default Page öffnet sich|  |
-   
+|Nr.|Testfall Beschreibung|Schritte|Erwartetes Reslutat|Erhaltenes Resultat|
+|:----:||:------:|:-----------------:|:----:|
+|1|Apache2 Default Page aufrufen|127.0.0.1:8080 im Browser eingeben|Apache2 Default Page öffnet sich| OK |
+|2|index.html ändern und Änderun überprüfen|ins Verzeichnis `/var/www/html` wechseln. Anschliessend mit `sudo nano index.html` die Datei index.html abändern. Zum Schluss `sudo service apache2 restart` ausführen und 172.0.0.1 weider im Browser aufrufen|Die Änderung ist nun auf der Default Page sichtbar| OK |    
+|3|user www-data ist erstellt| Datei `/etc/passwd`öffnen und user suchen| www-data ist in der Datei sichtbar| OK|
+|4|Neuer Benutzer (sarruja) ist erstellt| Datei `/etc/passwd`öffnen und user sarruja suchen| sarruja ist in der Datei sichtbar| OK |
+|5|Neue Gruppe (m300) ist erstellt| Datei `/etc/group` öffnen und nach der Gruppe m300 suchen| m300 ist in der Datei sichtbar| OK |
+|6| Firewall ist aktiv| `sudo ufw status` ausführe| Meldung `Status: active` und die Rules werden angezeigt| OK |
