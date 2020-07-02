@@ -38,6 +38,15 @@
 - [K5 - Persönliche Lernentwicklung](#k5---persönliche-lernentwicklung)
   - [Vergleich Vorwissen - Wissenszuwachs](#vergleich-vorwissen---wissenszuwachs)
   - [Refelxion](#refelxion)
+- [LB3](#lb3)
+- [K1 und K2](#k1-und-k2)
+  - [Persönliche Wissensstand](#persönliche-wissensstand)
+    - [Containerisierung](#containerisierung)
+    - [Docker](#docker)
+    - [Microservices](#microservices)
+- [K3](#k3)
+  - [Docker-Befehle](#docker-befehle)
+  - [Befehle in einem Docker-file](#befehle-in-einem-docker-file)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -512,3 +521,69 @@ Schlussendlich bin ich der Meinung, dass ich in der LB2 vieles dazu gelernt habe
 ## Refelxion
 Zu Beginn war ich mir nicht ganz sicher, was genau erwaret wird. Ich habe die Schritte vom Github durchgeführt, aber habe keinen Zusammenhan mit LB2 gefunden. Wahrscheinlich weil ich so verwirrt war. Je mehr ich mihc damit beschäft habe desto kalrer wurde alles. Auch das Bewertungsraster hat mir dabei geholfen. Für das nächste Mal hilft es, wenn ich mir zuerst alles studiere (auch das Bewertungsraster), damit ich shcon Beginn an eine Vorstellung haben, was von mir erwartet wird.     
 Schlussenldich bin ich trozdem zufrieden mit meine Leistung. 
+
+
+# LB3
+In der LB2 geht es um die Contaierisierung und Dokcerfile.
+
+# K1 und K2
+[K1](https://github.com/sarruja/m300_sarruja#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig) und [K2](https://github.com/sarruja/m300_sarruja#k2---eigene-lernumgebung-ple-ist-eingerichtet) wurden bereits in der LB2 dokumentiert.
+Persönliche Wissensstand
+----
+### Containerisierung
+Containersierung erlaubt es mehrere unabhängige Kontexte, indenen Applikationen laufen können.   
+Im Gegensatz zur Virtualisierung ist der Container leichtgewichtig, da er das Betriebssystem mit dem Host Teilt und es können mehrere Container parallel laufen.
+
+Vorteile sind, das die Container isoliert sind und unabhngig von den anderen.  
+Man kann eine Software lokal entwickeln und diese wird wo anderst genau gleich laufen, ohne Probleme.  
+
+Im Gegensatz zur Virtualisierung, muss man sich das Wissen zuerst aneigenen.
+
+### Docker
+Docker ist eine Software, die das Containerisierung ermöglicht.   
+Die Docker-Container werden aus Docker-Images gestartet.  
+
+Docker nahm die bereits vorhandene Linux-Containertechnologie und erweiterte sie. Durch protable Images und benutzerfreundlcihe Schnittstlle erschafften sie eine vollständige Lösung zur Erstellung und Verteilung von Container.   
+Diese sind wichtige Docker-Komponente:
+|Docker-Komponent|Bedeutung|
+|:--------------:|:-------:|
+|Registry        | darin werden Images abgelegt und verteilt        |
+|Docker Deamon   | Erstellen, ausführen und Überwachen von Container|
+|Docker Client   | Steuert Container via Shell |
+|Images          | Gebuildete Umgebung, Ausführbar als Contiainer |
+|Container       | Ausgeführte Images |
+
+### Microservices
+Microservices erledigen jeweils eine kleine Aufgabe. Jeder Service kann unabhängig entwickelt und eingesetzt werden. Ausserdem sind sie auch eifnach ersetzbar.
+
+
+# K3
+
+## Docker-Befehle
+- Zum Starten von neues Contianer: `docker run`    
+- Überblick über die aktuellen Container: `docker ps`
+- Liste der lokalen Images: `docker images`       
+- Entfernen von Container: `docker rm`         
+- Löschen von angegebenen Images: `docker rmi`     
+- Starten von gestoppten Container: `docker start`       
+- Container Stoppen: `docker stop`     
+- Logs von Container ausgeben: `docker logs`
+- Informationen zum lafuenden Prozessen in einem angegebenen Container: `docker top`
+
+## Befehle in einem Docker-file
+Dockerfile ist eine Textdatei, die genutzt wird, um ein Docker-image zu erstellen.   
+Hier sind wichtige Anweisungen im Dockerfile:
+- Welches Base-Image von [hub.docker.com](hub.docker.com): `FROM` 
+- Kopiert Dateien aus dem Build Context oder URL: `ADD`
+- Führt Anweisung aus, wenn Contianer gestartet wurde: `CMD`
+- Dateien aus Build Context in das Images zu kopieren: `COPY`
+- Legt eine ausführbare Datei fest, die beim Start des Containers laufen soll: `ENTRYPOINT`
+- Umgebundvariabeln im Image: `ENV`
+- Erklärt Docker, dass der Container einen Prozess enthlt, der an dem oder den angegebenen Ports lauscht: `EXPOSE`
+- Docker Engine chekt regelmässig den Status der Anwendung im Container: `HEALTHCHECK`
+- Führt Anweisung im Container aus und bestätigt Ergebnis: `RUN`
+- Ermöglicht es direkt bash oder PS Befehle zu nutzten: `SHELL`
+- Setzt den Benutzer der in `RUN, CMD, oder ENTRYPOINT` genutzt werden soll: `USER`
+- Daklariert angegebene Datei oder Varzechnis als Volume: `VOLUME`
+- Arbeitsverzeichnis für `RUN, CMD, ENTRYPOINT, ADD oder COPY` Anweisungen: `WORKDIR`
+
