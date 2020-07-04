@@ -528,8 +528,9 @@ Schlussenldich bin ich trozdem zufrieden mit meine Leistung.
 # LB3
 In der LB2 geht es um die Contaierisierung und Dokcerfile.
 
-# K1 und K2
-[K1](https://github.com/sarruja/m300_sarruja#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig) und [K2](https://github.com/sarruja/m300_sarruja#k2---eigene-lernumgebung-ple-ist-eingerichtet) wurden bereits in der LB2 dokumentiert.
+# K1 und K2      
+[K1](https://github.com/sarruja/m300_sarruja#k1---umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig) und [K2](https://github.com/sarruja/m300_sarruja#k2---eigene-lernumgebung-ple-ist-eingerichtet) wurden bereits in der LB2 dokumentiert.    
+
 Persönliche Wissensstand
 ----
 ### Containerisierung
