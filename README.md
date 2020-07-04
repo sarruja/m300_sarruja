@@ -612,4 +612,4 @@ Hier sind wichtige Anweisungen im Dockerfile:
 
 ## Schichtenmodel  
 
-![Contianer vs. Virtualisierung](https://www.hbauer.net/images/2017/201703-swimming-with-whales-3.jpg "VM vs Container "Contianer vs. Virtualisierung")
+![Contianer vs. Virtualisierung](https://www.hbauer.net/images/2017/201703-swimming-with-whales-3.jpg)
