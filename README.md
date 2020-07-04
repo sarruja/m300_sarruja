@@ -47,6 +47,8 @@
 - [K3](#k3)
   - [Docker-Befehle](#docker-befehle)
   - [Befehle in einem Docker-file](#befehle-in-einem-docker-file)
+  - [Netzwerkplan](#netzwerkplan)
+  - [Schichtenmodel](#schichtenmodel)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -559,6 +561,23 @@ Microservices erledigen jeweils eine kleine Aufgabe. Jeder Service kann unabhän
 
 # K3
 
+Ich möchte einen bestehenden Docker zu nehmen und zu implementieren.      
+**Docker Contianer**     
+Wir installieren einen Apache2 Container.
+1. Dafür führt man folgende Befehle aus:       
+  ```
+    docker build -t apache
+  ```
+2. Anschlissend starten wir den Container
+  ```
+    docker run --rm -d -p 8080:80 -v
+  ```
+3. Anschliessend testen wir, ob wir die Seite aufrufen können
+  ```
+    curl http://127.0.0.1:8080
+  ```
+  Ein weiterer Test ist es, die Datei `index.html` abzuändern und nochmals mit curl zu testen, um sicher zu gehen, das die Änderungen angenommen wurden.     
+
 ## Docker-Befehle
 - Zum Starten von neues Contianer: `docker run`    
 - Überblick über die aktuellen Container: `docker ps`
@@ -587,3 +606,10 @@ Hier sind wichtige Anweisungen im Dockerfile:
 - Daklariert angegebene Datei oder Varzechnis als Volume: `VOLUME`
 - Arbeitsverzeichnis für `RUN, CMD, ENTRYPOINT, ADD oder COPY` Anweisungen: `WORKDIR`
 
+## Netzwerkplan
+
+
+
+## Schichtenmodel  
+
+![Contianer vs. Virtualisierung](https://www.hbauer.net/images/2017/201703-swimming-with-whales-3.jpg "VM vs Container "Contianer vs. Virtualisierung")
