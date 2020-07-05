@@ -49,6 +49,8 @@
   - [Befehle in einem Docker-file](#befehle-in-einem-docker-file)
   - [Netzwerkplan](#netzwerkplan)
   - [Schichtenmodel](#schichtenmodel)
+- [K4](#k4)
+  - [Service-Überwachung & Benachrichtigung](#service-überwachung--benachrichtigung)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -612,5 +614,10 @@ Hier sind wichtige Anweisungen im Dockerfile:
 
 
 ## Schichtenmodel  
-
+Das Schichtenmodel für Containersierung sieht im gegensatz zu der Virtualisierung ein bisschen anders aus.    
+Auf dem Bild links sehen sie das Schichtenmodel zur Virtualisierung, während auf der rechte, die von der Containersierung zu sehen ist.   
+Wie man sieht benutzt man bei der Containersierung keinen Hypervisor sond Docker Engine. Ausserdem teilt sich der Container das Bestriebssystem mit dem Host und hat kein eigenes wie eine virtuelle Maschiene.
 ![Contianer vs. Virtualisierung](https://www.hbauer.net/images/2017/201703-swimming-with-whales-3.jpg)
+
+# K4     
+## Service-Überwachung & Benachrichtigung
