@@ -51,6 +51,9 @@
   - [Schichtenmodel](#schichtenmodel)
 - [K4](#k4)
   - [Service-Überwachung & Benachrichtigung](#service-überwachung--benachrichtigung)
+- [K5](#k5)
+  - [Vorwissen - Wissenszuwachs](#vorwissen---wissenszuwachs)
+  - [Reflexion](#reflexion)
 
 
 # K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
@@ -578,8 +581,13 @@ Wir installieren einen Apache2 Container.
 3. Anschliessend testen wir, ob wir die Seite aufrufen können
   ```
     curl http://127.0.0.1:8080
-  ```
+  ```    
+
+![Dokcer_web](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/docker_web.PNG "Docker_web)     
+
   Ein weiterer Test ist es, die Datei `index.html` abzuändern und nochmals mit curl zu testen, um sicher zu gehen, das die Änderungen angenommen wurden.     
+
+![Docker_web_changed](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/docker_web_changed.PNG "Docker_web_cahnged")
 
 ## Docker-Befehle
 - Zum Starten von neues Contianer: `docker run`    
@@ -621,3 +629,17 @@ Wie man sieht benutzt man bei der Containersierung keinen Hypervisor sond Docker
 
 # K4     
 ## Service-Überwachung & Benachrichtigung
+
+
+
+
+
+
+# K5
+## Vorwissen - Wissenszuwachs    
+Zu Beginn des Moduls, wusste ich noch nicht viel über Containersierung bzw. Docker. Die Begriffe hatte ich schon wenige Male gehört, doch wusste nicht viel dazu.    
+Zu diesem Thema, konnt ich mein Wissen in diesem Modul erweitern.     
+
+## Reflexion     
+Das Modul war definit sehr interesant, aber für mich auch herausfordernd.      
+Vorallem LB3. Zu Begin war ich planlos. Wusste nicht wo und wie Anfangen. Irgendawan hatte ich es dann einbisschne verstanden, aber leider zu spät.
