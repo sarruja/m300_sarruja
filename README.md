@@ -618,7 +618,7 @@ Hier sind wichtige Anweisungen im Dockerfile:
 - Arbeitsverzeichnis für `RUN, CMD, ENTRYPOINT, ADD oder COPY` Anweisungen: `WORKDIR`
 
 ## Netzwerkplan
-
+![Netzwerkplan](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/netzwerkplan_docker.PNG "Netzwerkplan")
 
 
 ## Schichtenmodel  
