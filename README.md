@@ -583,7 +583,7 @@ Wir installieren einen Apache2 Container.
     curl http://127.0.0.1:8080
   ```    
 
-![Dokcer_web](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/docker_web.PNG "Docker_web)     
+![Dokcer_web](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/docker_web.PNG "Docker_web")     
 
   Ein weiterer Test ist es, die Datei `index.html` abzuändern und nochmals mit curl zu testen, um sicher zu gehen, das die Änderungen angenommen wurden.     
 
@@ -618,7 +618,7 @@ Hier sind wichtige Anweisungen im Dockerfile:
 - Arbeitsverzeichnis für `RUN, CMD, ENTRYPOINT, ADD oder COPY` Anweisungen: `WORKDIR`
 
 ## Netzwerkplan
-![Netzwerkplan](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/netzwerkplan_docker.PNG "Netzwerkplan")
+![Netzwerkplan](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/Netzwerkplan_docker.png "Netzwerkplan")
 
 
 ## Schichtenmodel  
