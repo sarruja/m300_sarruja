@@ -660,7 +660,7 @@ Dafür habe ich cAdvisor installiert.:
 - AppArmor im group.d aktiviert
 - SELinux: selinux-policy-default installiert und aktiviert
   - sudo apt-get install selinux-basics selinux-policy-default auditd
-  - sudo selinux-activate
+  - sudo selinux-activate        
 ![SELinux](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/SELinux.PNG "SELinux")    
 
 
