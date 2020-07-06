@@ -49,8 +49,11 @@
   - [Befehle in einem Docker-file](#befehle-in-einem-docker-file)
   - [Netzwerkplan](#netzwerkplan)
   - [Schichtenmodel](#schichtenmodel)
+  - [Testen](#testen-1)
 - [K4](#k4)
   - [Service-Überwachung & Benachrichtigung](#service-überwachung--benachrichtigung)
+  - [Contianer Absicherung](#contianer-absicherung)
+  - [Sicherheitsmassnahmen](#sicherheitsmassnahmen)
 - [K5](#k5)
   - [Vorwissen - Wissenszuwachs](#vorwissen---wissenszuwachs)
   - [Reflexion](#reflexion)
@@ -627,11 +630,48 @@ Auf dem Bild links sehen sie das Schichtenmodel zur Virtualisierung, während au
 Wie man sieht benutzt man bei der Containersierung keinen Hypervisor sond Docker Engine. Ausserdem teilt sich der Container das Bestriebssystem mit dem Host und hat kein eigenes wie eine virtuelle Maschiene.
 ![Contianer vs. Virtualisierung](https://www.hbauer.net/images/2017/201703-swimming-with-whales-3.jpg)
 
+## Testen    
+|Nr.   |Testfall Beschreibung   |Schritte   |Erwartetes Reslutat   |Erhaltenes Resultat   |
+|:----:|:----------------------:|:---------:|:--------------------:|:---------------------:|
+|1|Apache2 Default Page aufrufen|curl http://127.0.0.1:8080|Apache2 Default Page wird im Terminal angezeigt| OK |
+|2|index.html ändern und Änderun überprüfen|ins Verzeichnis `/web/html` wechseln. Anschliessend mit `sudo nano index.html` die Datei index.html abändern.curl http://127.0.0.1:8080 ausführen|Die Änderung ist nun auf der Default Page sichtbar| OK |    
+
 # K4     
 ## Service-Überwachung & Benachrichtigung
+Dafür habe ich cAdvisor installiert.:
+```   
+  VERSION=v0.36.0 # use the latest release version from https://github.com/google/cadvisor/releases
+  sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8081 \
+  --detach=true \
+  --name=cadvisor \
+  --privileged \
+  --device=/dev/kmsg \
+  gcr.io/google-containers/cadvisor:$VERSION
+```
+
+## Contianer Absicherung        
+- Gruppe `Webadmin` erstellt und Benutzer `sarruja` Und diesen Benutzer dann in die Gruppe hinzugefügt.
+- AppArmor im group.d aktiviert
+- SELinux: selinux-policy-default installiert und aktiviert
+  - sudo apt-get install selinux-basics selinux-policy-default auditd
+  - sudo selinux-activate
+![SELinux](https://github.com/sarruja/m300_sarruja/blob/master/Bilder/SELinux.PNG "SELinux")    
 
 
-
+## Sicherheitsmassnahmen    
+- Mit Hilfe vom SELinux sind nur die nötigen Ports offen
+- - Speicher begrenzen
+  - docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes 127m -t 5s
+- Einbsatz von CPU begrenzen
+  docker run -d --name apache -c 2048 amouat/stress
+- Neustart begrenzen
+  - docker run -d --restart=on-failure:10 apache
 
 
 
